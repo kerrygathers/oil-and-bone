@@ -638,11 +638,11 @@
 
         /* INFO CLOSE BUTTON */
 
-        $(document).ready(function () {
-            $('#info-close').click(function () {
-                $('#info').hide();
-            });
+
+        $('#info-close').click(function () {
+            $('#info').hide();
         });
+
 
     }
 
