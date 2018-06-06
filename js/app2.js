@@ -56,16 +56,6 @@
             whaleLayer = L.geoJson(data, options).addTo(map),
             boneLayer = L.geoJson(data, options).addTo(map);
 
-        portLayer.eachLayer(function (layer) {
-
-            var props = layer.feature.properties;
-
-            var tooltip = "<h2 class='tooltip-title'>" + props.name + "</h2>" +
-                "<p class='tooltip-info-text'> Click for more information</p>"
-
-            layer.bindTooltip(tooltip);
-        });
-
         spermLayer.setStyle({
             color: '#FBD62D',
         });
@@ -93,9 +83,6 @@
         resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, 1804);
 
         sequenceUI(spermLayer, whaleLayer, boneLayer);
-
-        // add info panel on port layer click
-        retrieveInfo(portLayer);
 
     } // end drawMap()
 
@@ -175,8 +162,12 @@
 
 
 
-        // add year legend with slider
+        // add year legend above slider
         yearLegend(currentYear);
+
+
+        // update the hover window with current year
+        retrieveInfo(portLayer, currentYear);
 
     }
 
@@ -327,20 +318,70 @@
 
         yearLegend.addTo(map);
 
+        /*
+        // add control to replace legend on small screens
+        var legendCollapse = L.control({
+            position: 'bottomright'
+        });
+
+        // when the control is added to the map
+        legendCollapse.onAdd = function (map) {
+
+            // select the legend using id attribute of legend
+            var legendCollapse = L.DomUtil.get("legend-collapse");
+
+            // return the selection
+            return legendCollapse;
+            
+        }
+        */
+        // populate HTML elements with relevant info
+
+        //legendCollapse.addTo(map);
+
     }
 
 
-    function retrieveInfo(portLayer) {
+    function retrieveInfo(portLayer, currentYear) {
+        // select the element and reference with variable
+        // and hide it from view initially
+        // var info = $('#info').hide();
 
+        // since maleLayer is on top, use to detect mouseover events
         portLayer.on('click', function (e) {
 
+            // access properties of target layer
             var props = e.layer.feature.properties;
 
-            // make info window visible
+            // remove the none class to display and show
             $('#info').show();
+
+            console.log(props.name);
 
             // populate HTML elements with relevant info
             $(".port-name span:first-child").html(props.name);
+            $(".port-year span:first-child").html(currentYear);
+            // numbro plugin formats numbers
+            $(".sperm span:last-child").html('$' + numbro(props['SV' + currentYear]).format({
+                average: true,
+                mantissa: 2
+            }));
+            $(".whale span:last-child").html('$' + numbro(props['WV' + currentYear]).format({
+                average: true,
+                mantissa: 2
+            }));
+            $(".bone span:last-child").html('$' + numbro(props['BV' + currentYear]).format({
+                average: true,
+                mantissa: 2
+            }));
+
+            /*
+            // raise opacity level as visual affordance
+            e.layer.setStyle({
+                fillOpacity: .6
+            });
+            */
+
 
             // empty arrays for males and females values
             var spermValues = [],
@@ -355,8 +396,8 @@
             }
 
             $('.spermspark').sparkline(spermValues, {
-                width: '200px',
-                height: '35px',
+                width: '170px',
+                height: '30px',
                 lineColor: '#FBD62D',
                 fillColor: 'rgb(251, 214, 45, 0.6)',
                 highlightLineColor: '#fff',
@@ -449,8 +490,8 @@
             });
 
             $('.whalespark').sparkline(whaleValues, {
-                width: '200px',
-                height: '35px',
+                width: '170px',
+                height: '30px',
                 lineColor: '#1a1aff',
                 fillColor: 'rgb(26, 26, 255, 0.6)',
                 highlightLineColor: '#fff',
@@ -543,8 +584,8 @@
             });
 
             $('.bonespark').sparkline(boneValues, {
-                width: '200px',
-                height: '35px',
+                width: '170px',
+                height: '30px',
                 lineColor: '#FCFCF7',
                 fillColor: 'rgb(252, 252, 247, 0.6)',
                 highlightLineColor: '#fff',

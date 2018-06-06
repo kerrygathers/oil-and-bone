@@ -10,29 +10,29 @@ header {
     width: 100%;
     height: 100px;
     background-color: #000000;
-    border-bottom: solid 3px #f7f4ea;
+    box-shadow: 0px 5px 5px #2B1B17;
     z-index: 800;
 }
 
 h1 {
-    font-size: 4em;
-    font-family: 'Fondamento', cursive;
+    font-size: 63px;
+    font-family: 'IM Fell English', serif;
     display: inline-block;
     color: #f7f4ea;
     margin-left: 18px;
     margin-right: 30px;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 43px;
+    padding-bottom: 18px;
 }
 
 h4 {
-    font-size: 1.3em;
-    font-family: 'Merriweather', serif;
+    font-size: 23px;
+    font-family: 'IM Fell English', serif;
     font-style: italic;
     display: inline-block;
-    margin-right: 18px;
-    margin-left: 18px;
-    padding-bottom: 20px;
+    margin-right: 16px;
+    margin-left: 20px;
+    padding-bottom: 18px;
     color: #f7f4ea;
 }
 
@@ -53,23 +53,9 @@ footer {
 }
 
 p {
-    font-family: "Questrial", sans-serif;
-    font-size: 1em;
-    color: #ffffff;
-}
-
-p.footer {
-    font-size: 14px;
-    margin: 10px 18px 0px 18px;
-    vertical-align: middle;
-}
-
-/* Style tooltip/popup text */
-
-p.tooltip {
-    font-size: 14px;
-    color: #000000;
-    margin: 4px;
+    font-family: 'IM Fell English', serif;
+    font-size: 16px;
+    color: #f7f4ea;
 }
 
 
@@ -83,15 +69,479 @@ a:visited {}
 
 /* Add style for text in layer control box */
 
-.layer-control-text {
-    font-family: "Questrial", sans-serif;
+.mapbox-logo,
+.leaflet-control-attribution {
+    display: none;
+
+}
+
+.legend-large,
+.legend-small {
+    border-radius: 50%;
+}
+
+hr.small,
+hr.large {
+    width: 83px;
+    position: absolute;
+    top: -8px;
+    left: 55px;
+    border: 1px dashed #ccc;
+    /* overwrite assembly.css rule */
+    margin-top: 8px;
+    /* overwrite assembly.css rule */
+}
+
+a {
+    color: #3F681C;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* layer info box on top of map */
+
+#info {
+    font-weight: 500;
+    z-index: 400;
+    position: absolute;
+    width: 366px;
+    bottom: 118px;
+    left: 11px;
+}
+
+#info-close {
+    color: #f7f4ea;
+    float: right;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#info-close:hover,
+#info-close:focus {
+    color: rgba(75, 75, 75, .9);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.port-name {
+    font-family: 'IM Fell English', serif;
+    font-size: 26px;
+    color: #f7f4ea;
+    padding-bottom: 18px;
+    padding-left: 3px;
+    border-bottom: solid 0.5px #f7f4ea;
+}
+
+.port-year {
+    font-family: 'IM Fell English', serif;
+    font-size: 22px;
+    margin-top: -7px;
+}
+
+.port-product {
+    font-family: 'IM Fell English', serif;
+}
+
+.sperm {
+    font-family: 'IM Fell English', serif;
+    font-size: 22px;
+    color: #f7f4ea;
+    text-align: right;
+    margin-top: 33px;
+    margin-right: 20px;
+}
+
+.whale {
+    font-family: 'IM Fell English', serif;
+    font-size: 22px;
+    color: #f7f4ea;
+    text-align: right;
+    margin-top: 23px;
+    margin-right: 20px;
+}
+
+.bone {
+    font-family: 'IM Fell English', serif;
+    font-size: 22px;
+    color: #f7f4ea;
+    text-align: right;
+    margin-top: 24px;
+    margin-right: 20px;
+}
+
+
+/* sparkline styling */
+
+.jqstooltip {
+    box-sizing: content-box;
+    border: none !important;
+    background-color: color: rgba(0, 0, 0, 1);
+    border-radius: 4px;
+    font-family: 'Lora', serif !important;
+}
+
+/* Legend and layer control styling */
+
+#legend {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    color: #f7f4ea;
+    width: 144px;
+}
+
+.legend-text {
+    font-family: 'IM Fell English', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #f7f4ea;
+}
+
+.leaflet-control-layers-expanded {
+    color: #f7f4ea;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-style: none !important;
+    border-radius: 4px 0px 0px 4px;
+    width: 113px;
+    position: absolute;
+    right: 179px;
+    top: 0px;
+}
+
+#layer-info {
+    border-radius: 0px 4px 4px 0px;
+    height: 102px;
+    z-index: 700;
+    position: absolute;
+    right: 162px;
+    top: 110px;
+}
+
+.layer-title {
+    font-family: 'IM Fell English', serif;
+    font-size: 14.5px;
+    line-height: 2.1em;
+}
+
+.sperm-circle {
     display: inline-block;
+    margin: 11px 6px 0px 0px;
+    font-size: 21px;
+    color: #FBD62D;
+}
+
+.sperm-circle:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.whale-circle {
+    display: inline-block;
+    font-size: 21px;
+    color: #1a1aff;
+}
+
+.whale-circle:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.bone-circle {
+    display: inline-block;
+    padding-bottom: 0px;
+    font-size: 21px;
+    color: #FCFCF7;
+}
+
+.bone-circle:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+/* Tooltips */
+
+.sperm-tt-icon {
+    display: inline;
+    margin: 0px 0px -6px 0px;
+    padding: 0px;
+    font-size: 24px;
+    color: #FBD62D;
+}
+
+.whale-tt-icon {
+    display: inline;
+    margin: 0px 0px -6px 0px;
+    padding: 0px;
+    font-size: 24px;
+    color: #1a1aff;
+}
+
+.bone-tt-icon {
+    display: inline;
+    margin: 0px 0px -6px 0px;
+    padding: 0px;
+    font-size: 24px;
+    color: #FCFCF7;
+}
+
+.leaflet-tooltip {
+    z-index: 1000;
+    background-color: rgb(0, 0, 0, 0.85);
+    border-radius: 4px;
+    padding: 12px;
+    color: #f7f4ea;
+    border: none;
+}
+
+.leaflet-popup-tip-container {
+    display: none;
+}
+
+.tooltip-title {
+    font-family: 'IM Fell English', serif;
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+    border-bottom: solid 0.5px #f7f4ea;
+    font-size: 20px;
+}
+
+.tooltip-product {
+    font-family: 'IM Fell English', serif;
+    font-size: 20px;
+}
+
+.tooltip-body {
+    margin-top: 5px;
+    font-family: 'Lora', serif;
     font-size: 14px;
+}
+
+.tooltip-info-text {
+    font-family: 'IM Fell English', serif;
+    font-size: 14px;
+    padding-right: 8px;
+    font-style: italic;
+}
+
+.triangle {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.turning-point-1 {
+    color: #f7f4ea;
+    font-size: 16px;
+    position: absolute;
+    bottom: 53px;
+    left: 117px;
+    z-index: 1000;
+}
+
+.tp-tooltip-1 {
+    visibility: hidden;
+    font-family: 'IM Fell English', serif;
+    color: #f7f4ea;
+    font-size: 16px;
+    position: absolute;
+    bottom: 19px;
+    left: -52px;
+    width: 124px;
+    z-index: 900;
+}
+
+.turning-point-1:hover .tp-tooltip-1 {
+    visibility: visible;
+}
+
+.turning-point-2 {
+    color: #f7f4ea;
+    font-size: 16px;
+    position: absolute;
+    bottom: 53px;
+    left: 146px;
+    z-index: 1000;
+}
+
+.tp-tooltip-2 {
+    visibility: hidden;
+    font-family: 'IM Fell English', serif;
+    color: #f7f4ea;
+    font-size: 16px;
+    position: absolute;
+    bottom: 19px;
+    left: -60px;
+    width: 140px;
+    z-index: 900;
+}
+
+.turning-point-2:hover .tp-tooltip-2 {
+    visibility: visible;
+}
+
+.turning-point-3 {
+    color: #f7f4ea;
+    font-size: 16px;
+    position: absolute;
+    bottom: 53px;
+    left: 171px;
+    z-index: 1000;
+}
+
+.tp-tooltip-3 {
+    visibility: hidden;
+    font-family: 'IM Fell English', serif;
+    color: #f7f4ea;
+    font-size: 16px;
+    position: absolute;
+    bottom: 19px;
+    left: -84px;
+    width: 190px;
+    z-index: 900;
+}
+
+.turning-point-3:hover .tp-tooltip-3 {
+    visibility: visible;
+}
+
+.turning-point-4 {
+    color: #f7f4ea;
+    font-size: 16px;
+    position: absolute;
+    bottom: 53px;
+    left: 263px;
+    z-index: 1000;
+}
+
+.tp-tooltip-4 {
+    visibility: hidden;
+    font-family: 'IM Fell English', serif;
+    color: #f7f4ea;
+    font-size: 16px;
+    position: absolute;
+    bottom: 19px;
+    left: -80px;
+    width: 180px;
+    z-index: 900;
+}
+
+.turning-point-4:hover .tp-tooltip-4 {
+    visibility: visible;
+}
+
+.turning-point:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+/* info modal background */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 208px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+/* modal content */
+
+.modal-content {
+    font-size: 16px;
+    line-height: 16px;
+    margin: auto;
+    padding: 16px;
+    width: 60%;
+    max-width: 480px;
+}
+
+/* modal close button */
+
+.close {
+    color: #f7f4ea;
+    float: right;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgba(75, 75, 75, .9);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* style zoom control */
+
+.leaflet-bar {
+    border-style: none !important;
+}
+
+.leaflet-bar a {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #f7f4ea;
+}
+
+.leaflet-bar a:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.leaflet-control-zoom-in {
+    margin-bottom: 3px;
+    border-style: none !important;
+    border-radius: 4px !important;
+}
+
+.leaflet-control-zoom-out {
+    border-style: none !important;
+    border-radius: 4px !important;
+}
+
+#slider {
+    position: absolute;
+    height: 40px;
+    bottom: 0px;
+    left: 68px;
+    z-index: 1000;
+}
+
+#year-legend {
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    width: 60px;
+}
+
+.year {
+    font-family: 'IM Fell English', serif;
+    font-size: 22px;
+}
+
+#placeholder {
+    height: 40px;
+    position: absolute;
+    bottom: 58px;
+    left: 11px;
+    width: 366px;
+    z-index: 800;
+}
+
+.placeholder-text {
+    font-family: 'IM Fell English', serif;
+    font-size: 14.5px;
+    text-align: center;
+    padding-top: 7px;
+    font-style: italic;
 }
 
 /* Responsive style for header and map on narrower screens */
 
-@media screen and (max-width: 898px) {
+@media screen and (max-width: 900px) {
     header {
         height: 122px;
     }
@@ -99,14 +549,22 @@ a:visited {}
     #map {
         top: 122px;
     }
+
+    #layer-info {
+        top: 132px;
+    }
 }
 
-@media screen and (max-width: 543px) {
+@media screen and (max-width: 549px) {
     header {
         height: 140px;
     }
 
     #map {
         top: 140px;
+    }
+
+    #layer-info {
+        top: 150px;
     }
 }
