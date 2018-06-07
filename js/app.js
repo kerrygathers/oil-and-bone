@@ -101,8 +101,16 @@
 
     function calcRadius(val) {
 
+        /*
         var radius = Math.sqrt(val / Math.PI);
         return radius * .015; // adjust .25 as a scale factor
+        */
+
+        var radius = d3.scaleSqrt()
+            .domain([0, 84389592])
+            .range([8, 40]);
+
+        return radius;
 
     }
 
@@ -239,7 +247,7 @@
 
         legendControl.addTo(map);
 
-        // loop through all university features
+        // loop through all port features
         var dataValues = data.features.map(function (port) {
             // for each year
             for (var year in port.properties) {
@@ -342,7 +350,7 @@
             // populate HTML elements with relevant info
             $(".port-name span:first-child").html(props.name);
 
-            // empty arrays for males and females values
+            // empty arrays for product values
             var spermValues = [],
                 whaleValues = [],
                 boneValues = [];
