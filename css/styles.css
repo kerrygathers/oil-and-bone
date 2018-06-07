@@ -203,20 +203,39 @@ a:hover {
     color: #f7f4ea;
     background-color: rgba(0, 0, 0, 0.75);
     border-style: none !important;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 0px 0px 0px 4px;
     width: 113px;
     position: absolute;
-    right: 179px;
-    top: 0px;
+    right: 177px;
+    top: 35px;
+}
+
+#port-legend {
+    line-height: 2.1em;
+    padding: 3px 30px 0px 0px;
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: solid 1px rgb(247, 244, 234, 0.75);
+    position: absolute;
+    z-index: 700;
+    right: 160px;
+    top: 110px;
+}
+
+.port-legend-icon {
+    margin: 6px 6px 6px 8px;
+}
+
+.port-text {
+    font-size: 14.5px;
 }
 
 #layer-info {
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 0px 4px 0px;
     height: 102px;
     z-index: 700;
     position: absolute;
-    right: 162px;
-    top: 110px;
+    right: 160px;
+    top: 145px;
 }
 
 .layer-title {
@@ -520,23 +539,6 @@ a:hover {
 .year {
     font-family: 'IM Fell English', serif;
     font-size: 22px;
-}
-
-#placeholder {
-    height: 40px;
-    position: absolute;
-    bottom: 58px;
-    left: 11px;
-    width: 366px;
-    z-index: 800;
-}
-
-.placeholder-text {
-    font-family: 'IM Fell English', serif;
-    font-size: 14.5px;
-    text-align: center;
-    padding-top: 7px;
-    font-style: italic;
 }
 
 /* Responsive style for header and map on narrower screens */
