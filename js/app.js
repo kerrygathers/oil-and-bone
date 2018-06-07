@@ -638,11 +638,11 @@
 
         /* INFO CLOSE BUTTON */
 
-        $(document).ready(function () {
-            $('#info-close').click(function () {
-                $('#info').hide();
-            });
+
+        $('#info-close').click(function () {
+            $('#info').hide();
         });
+
 
     }
 
@@ -667,11 +667,11 @@
         $('#bone-modal').hide();
 
 
-        $(document).ready(function () {
-            $('#tp1-close').click(function () {
-                $('#tp1-modal').hide();
-            });
+
+        $('#tp1-close').click(function () {
+            $('#tp1-modal').hide();
         });
+
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
@@ -697,11 +697,10 @@
         $('#bone-modal').hide();
 
 
-        $(document).ready(function () {
-            $('#tp2-close').click(function () {
-                $('#tp2-modal').hide();
-            });
+        $('#tp2-close').click(function () {
+            $('#tp2-modal').hide();
         });
+
 
         window.onclick = function (event) {
             if (event.target == modal2) {
@@ -726,11 +725,10 @@
         $('#bone-modal').hide();
 
 
-        $(document).ready(function () {
-            $('#tp3-close').click(function () {
-                $('#tp3-modal').hide();
-            });
+        $('#tp3-close').click(function () {
+            $('#tp3-modal').hide();
         });
+
 
         window.onclick = function (event) {
             if (event.target == modal3) {
@@ -754,11 +752,10 @@
         $('#whale-modal').hide();
         $('#bone-modal').hide();
 
-        $(document).ready(function () {
-            $('#tp4-close').click(function () {
-                $('#tp4-modal').hide();
-            });
+        $('#tp4-close').click(function () {
+            $('#tp4-modal').hide();
         });
+
 
         window.onclick = function (event) {
             if (event.target == modal4) {
@@ -783,12 +780,10 @@
         $('#bone-modal').hide();
         $('#whale-modal').hide();
 
-
-        $(document).ready(function () {
-            $('#sperm-close').click(function () {
-                $('#sperm-modal').hide();
-            });
+        $('#sperm-close').click(function () {
+            $('#sperm-modal').hide();
         });
+
 
         window.onclick = function (event) {
             if (event.target == spermModal) {
@@ -811,11 +806,10 @@
         $('#sperm-modal').hide();
         $('#bone-modal').hide();
 
-        $(document).ready(function () {
-            $('#whale-close').click(function () {
-                $('#whale-modal').hide();
-            });
+        $('#whale-close').click(function () {
+            $('#whale-modal').hide();
         });
+
 
         window.onclick = function (event) {
             if (event.target == whaleModal) {
@@ -838,11 +832,10 @@
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
 
-        $(document).ready(function () {
-            $('#bone-close').click(function () {
-                $('#bone-modal').hide();
-            });
+        $('#bone-close').click(function () {
+            $('#bone-modal').hide();
         });
+
 
         window.onclick = function (event) {
             if (event.target == boneModal) {
