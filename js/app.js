@@ -42,8 +42,8 @@
         var portLayer = L.geoJson(data, {
                 pointToLayer: function (feature, latlng) {
                     var portIcon = new L.icon({
-                        iconUrl: "./images/harbor-11.svg",
-                        iconSize: [8.5, 8.5],
+                        iconUrl: "./images/harbor-15.svg",
+                        iconSize: [11, 11],
                         popupAnchor: [-22, -22],
                         className: "icon"
                     });
@@ -106,11 +106,14 @@
         return radius * .015; // adjust .25 as a scale factor
         */
 
+
         var radius = d3.scaleSqrt()
             .domain([0, 84389592])
             .range([8, 40]);
 
         return radius;
+
+
 
     }
 
