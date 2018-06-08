@@ -553,7 +553,11 @@ a:hover {
     }
 
     #layer-info {
-        top: 132px;
+        top: 167px;
+    }
+
+    #port-legend {
+        top: 132px
     }
 }
 
@@ -567,6 +571,10 @@ a:hover {
     }
 
     #layer-info {
-        top: 150px;
+        top: 185px;
+    }
+
+    #port-legend {
+        top: 150px
     }
 }
