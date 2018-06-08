@@ -104,6 +104,14 @@
         var radius = Math.sqrt(val / Math.PI);
         return radius * .015; // adjust .25 as a scale factor
 
+        /*
+        var radius = d3.scaleSqrt()
+            .domain([0, 84389592])
+            .range([8, 40]);
+
+        return radius;
+        */
+
     }
 
 
@@ -206,9 +214,7 @@
                 // current value of slider is current year
                 var currentYear = this.value;
 
-                // Modal 2
-                //var moment1 = document.getElementsByClassName('modal-content');
-
+                // illuminate timeline modal buttons on corresponding currentYear
                 if (currentYear == 1812) {
                     $('.war-1812').css('color', '#FBD62D');
                 } else {
