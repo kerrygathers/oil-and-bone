@@ -173,8 +173,6 @@
             layer.bindTooltip(tooltip);
         });
 
-
-
         // add year legend with slider
         yearLegend(currentYear);
 
@@ -207,6 +205,33 @@
 
                 // current value of slider is current year
                 var currentYear = this.value;
+
+                // Modal 2
+                //var moment1 = document.getElementsByClassName('modal-content');
+
+                if (currentYear == 1812) {
+                    $('.war-1812').css('color', '#FBD62D');
+                } else {
+                    $('.war-1812').css('color', '#f7f4ea');
+                }
+
+                if (currentYear == 1820) {
+                    $('.essex').css('color', '#FBD62D');
+                } else {
+                    $('.essex').css('color', '#f7f4ea');
+                }
+
+                if (currentYear == 1827) {
+                    $('.new-bedford').css('color', '#FBD62D');
+                } else {
+                    $('.new-bedford').css('color', '#f7f4ea');
+                }
+
+                if (currentYear == 1853) {
+                    $('.golden-age').css('color', '#FBD62D');
+                } else {
+                    $('.golden-age').css('color', '#f7f4ea');
+                }
 
                 // resize the circles with updated year
                 resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear);
