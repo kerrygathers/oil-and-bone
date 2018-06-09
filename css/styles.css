@@ -101,6 +101,29 @@ a:hover {
     text-decoration: underline;
 }
 
+/* About */
+
+#about-button {
+    background-color: rgb(0, 0, 0, 0.85);
+    opacity: 0.9;
+    position: absolute;
+    z-index: 900;
+    top: 0px;
+    right: 0px;
+    padding: 2px 8px;
+    border-radius: 0px 0px 0px 4px;
+}
+
+.about-button {
+    color: #f7f4ea;
+}
+
+.about-button:hover {
+    color: rgb(247, 244, 234, 0.8);
+    cursor: pointer;
+}
+
+
 /* layer info box on top of map */
 
 #info {
@@ -130,7 +153,7 @@ a:hover {
     font-family: 'IM Fell English', serif;
     font-size: 26px;
     color: #f7f4ea;
-    padding-bottom: 18px;
+    padding-bottom: 14px;
     padding-left: 2px;
     border-bottom: solid 0.5px #f7f4ea;
 }
@@ -138,7 +161,7 @@ a:hover {
 .sparkline-title {
     font-family: 'IM Fell English', serif;
     font-size: 22px;
-    margin-top: -2px;
+    margin-top: 1px;
 }
 
 .title-of {
@@ -149,7 +172,7 @@ a:hover {
 .sparkline-sub {
     font-family: 'IM Fell English', serif;
     font-size: 16px;
-    margin-bottom: 6px;
+    margin-bottom: 1px;
 }
 
 .port-product {
@@ -215,7 +238,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.75);
     border-style: none !important;
     border-radius: 0px 0px 0px 4px;
-    width: 113px;
+    width: 114px;
     position: absolute;
     right: 177px;
     top: 35px;
@@ -223,7 +246,7 @@ a:hover {
 
 #port-legend {
     line-height: 2.1em;
-    padding: 3px 30px 0px 0px;
+    padding: 3px 31px 0px 0px;
     border-radius: 4px 4px 0px 0px;
     border-bottom: solid 1px rgb(247, 244, 234, 0.75);
     position: absolute;

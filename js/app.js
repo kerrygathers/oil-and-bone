@@ -678,6 +678,39 @@
 
     }
 
+    // ABOUT MODAL
+
+    var modalAbout = document.getElementById('about-modal');
+
+    // Get the button that opens the modal
+    var btnAbout = document.getElementById("about-button");
+
+    // When the user clicks the button, open the modal 
+    btnAbout.onclick = function () {
+        modalAbout.style.display = "block";
+
+        // if another modal is open, hide it
+        $('#tp1-modal').hide();
+        $('#tp2-modal').hide();
+        $('#tp3-modal').hide();
+        $('#tp4-modal').hide();
+        $('#sperm-modal').hide();
+        $('#whale-modal').hide();
+        $('#bone-modal').hide();
+
+        $('#about-close').click(function () {
+            $('#about-modal').hide();
+        });
+
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modalAbout) {
+                modalAbout.style.display = "none";
+            }
+        }
+    }
+
     // TIMELINE MODALS
 
     // Modal 1
@@ -697,6 +730,7 @@
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
+        $('#about-modal').hide();
 
 
 
@@ -727,6 +761,7 @@
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
+        $('#about-modal').hide();
 
 
         $('#tp2-close').click(function () {
@@ -755,6 +790,7 @@
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
+        $('#about-modal').hide();
 
 
         $('#tp3-close').click(function () {
@@ -783,6 +819,7 @@
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
+        $('#about-modal').hide();
 
         $('#tp4-close').click(function () {
             $('#tp4-modal').hide();
@@ -811,6 +848,7 @@
         $('#tp4-modal').hide();
         $('#bone-modal').hide();
         $('#whale-modal').hide();
+        $('#about-modal').hide();
 
         $('#sperm-close').click(function () {
             $('#sperm-modal').hide();
@@ -837,6 +875,7 @@
         $('#tp4-modal').hide();
         $('#sperm-modal').hide();
         $('#bone-modal').hide();
+        $('#about-modal').hide();
 
         $('#whale-close').click(function () {
             $('#whale-modal').hide();
@@ -863,6 +902,7 @@
         $('#tp4-modal').hide();
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
+        $('#about-modal').hide();
 
         $('#bone-close').click(function () {
             $('#bone-modal').hide();
