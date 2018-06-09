@@ -131,14 +131,25 @@ a:hover {
     font-size: 26px;
     color: #f7f4ea;
     padding-bottom: 18px;
-    padding-left: 3px;
+    padding-left: 2px;
     border-bottom: solid 0.5px #f7f4ea;
 }
 
-.port-year {
+.sparkline-title {
     font-family: 'IM Fell English', serif;
     font-size: 22px;
-    margin-top: -7px;
+    margin-top: -2px;
+}
+
+.title-of {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.sparkline-sub {
+    font-family: 'IM Fell English', serif;
+    font-size: 16px;
+    margin-bottom: 6px;
 }
 
 .port-product {
@@ -150,7 +161,7 @@ a:hover {
     font-size: 22px;
     color: #f7f4ea;
     text-align: right;
-    margin-top: 33px;
+    margin-top: 28px;
     margin-right: 20px;
 }
 
@@ -168,7 +179,7 @@ a:hover {
     font-size: 22px;
     color: #f7f4ea;
     text-align: right;
-    margin-top: 24px;
+    margin-top: 23px;
     margin-right: 20px;
 }
 
