@@ -10,6 +10,7 @@
     <link href='https://api.mapbox.com/mapbox-assembly/v0.21.2/assembly.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css?family=Lora|IM Fell English:300,400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href='css/styles.css' rel='stylesheet' />
 </head>
 
@@ -48,7 +49,13 @@
             <div class="modal-content bg-black round px12 py12">
                 <span id='tp1-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p>The War of 1812</p>
+                    <p class='modal-title'>1812 &mdash; 1815: The War of 1812</p>
+                    <p class='py12'>The war for American independence obliterated Nantucket's whaling fleet &mdash; the dominant fleet of the time &mdash; but by the beginning of the 19th century, whaling profits were driving prosperity for Nantucketers once again. However, Great Britain's hostile trade policies and harassment and impressment of Americans at sea, including whalemen, made for a volatile maritime economy. Indeed, these issues ultimately led to another war.</p>
+                    <p class='pb12'>When the War of 1812 broke out, dozens of American whaleships already at sea were destroyed by the British Navy. For the three years that the U.S. and Great Britain fought, American whaling operations nearly shut down completely. Only Nantucket, uniquely dependent on whaling because of its lack of arable land, continued consistently sending out whaleships.</p>
+                    <p class='pb12'>But whaling during the war was dangerous and unpredictable, and it was a lean time for Nantucket. Many whalers left Nantucket for safer ports, including a group who founded the town of Hudson, New York, over 100 miles inland along the Hudson River, which would find some success in whaling years later. Meanwhile, Nantucket's leaders tried to negotiate directly with the British, seeking the right to continue whaling in exchange for Nantucket's official neurality in the conflict. The British, for their part, wanted Nantucketers to relocate their operations to British territory in Nova Scotia. But the 1815 Treaty of Ghent ended the war before these negotiations reached any conclusion.</p>
+                    <p class='pb12'>The end of the War fo 1812 marks the beginning of the Golden Age of Yankee Whaling, an era in which American whalers took advantage of the largely peaceful seas and came to dominate the global whaling industry.</p>
+                    <img class='py12' src='./images/1812.jpg' alt='The War of 1812'>
+                    <p class='caption'>American and British vessels square off in 1812</p>
                 </div>
             </div>
         </div>
@@ -60,7 +67,7 @@
             </div>
             <div class='tp-tooltip-2 flex-parent-inline flex-parent--center-cross flex-parent--column'>
                 <div class='flex-child px6 py6 bg-darken75 align-center round txt-s'>
-                    <p class='tp-name'>The Essex Disaster</p>
+                    <p class='tp-name'>The Wreck of the Essex</p>
                 </div>
                 <span class='flex-child triangle triangle--d'></span>
             </div>
@@ -72,7 +79,12 @@
             <div class="modal-content bg-black round px12 py12">
                 <span id='tp2-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p>The Essex Disaster</p>
+                    <p class='modal-title'>1820: The Wreck of the Essex</p>
+                    <p class='py12'>In the fall of 1820, Captain George Pollard, Jr., steered the <i>Essex</i>, which had launched from Nantucket the previous year, into newly discovered whaling grounds in the South Pacific, thousands of miles west of South America. One morning the crew spotted an 85-foot sperm whale acting strangely nearby. To their horror, the whale swam towards the ship and rammed it repeatedly. The whale then retreated a few hundred yards, faced the bow of the ship, and charged again to deliver the final, crushing blow. The bow was crushed, and as the whale shook free from the timbers and disappeared, the ship began to sink.</p>
+                    <p class='pb12'>The crew of 20 took to three small whaleboats. The closest land was the Marquesas Islands, 1,200 miles to the west. But the crew had heard rumors of cannibals on the islands of the South Pacific, so they voted to go to South America, nearly twice as far away. Only six members of the party survived the ensuing ordeal, and some did so only by eating their deceased shipmates.</p>
+                    <p>The tale of the <i>Essex</i>, both for its gruesomness and the perseverance of the survivors, is one of the most infamous stories in whaling history, and it is said to have partly inspired Herman Melville's <i>Moby-Dick</i>, which would become the most powerful depiction of whaling in American literature.</p>
+                    <img class='py12' src='./images/essex.jpg' alt='The Wreck of the Essex'>
+                    <p class='caption'>An illustration of the destruction of the Essex, 1820</p>
                 </div>
             </div>
         </div>
@@ -96,7 +108,16 @@
             <div class="modal-content bg-black round px12 py12">
                 <span id='tp3-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p>The Rise of New Bedford</p>
+                    <p class='modal-title'>1827: The Rise of New Bedford</p>
+                    <div class='grid'>
+                        <div class='col--4'>
+                            <img class='py12' src='./images/rotch.jpg' alt='William Rotch'>
+                            <p class='caption'>William Rotch, Jr.</p>
+                        </div>
+                        <div class='col--8'>
+                            <p class='py12 pl12'>About New Bedford</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,11 +125,11 @@
         <!-- turning point 4 -->
         <div class='turning-point-4'>
             <div id='tp4-button' class='turning-point bg-darken75 opacity75-on-hover round px3 py3'>
-                <svg class='icon golden-age'><use xlink:href='#icon-info'/></svg>
+                <svg class='icon great-fire'><use xlink:href='#icon-info'/></svg>
             </div>
             <div class='tp-tooltip-4 flex-parent-inline flex-parent--center-cross flex-parent--column'>
                 <div class='flex-child px6 py6 bg-darken75 align-center round txt-s'>
-                    <p class='tp-name'>Peak of the Golden Age</p>
+                    <p class='tp-name'>The Great Nantucket Fire</p>
                 </div>
                 <span class='flex-child triangle triangle--d'></span>
             </div>
@@ -120,10 +141,129 @@
             <div class="modal-content bg-black round px12 py12">
                 <span id='tp4-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p>Peak of the Golden Age</p>
+                    <p class='modal-title'>1846: The Great Nantucket Fire</p>
+                    <p class='py12'>In the early 19th century, the success of Nantucket's whaling fleet was unrivaled. The island's population lived and breathed whaling, and men lucky or enterprising enough to become ship masters or owners could become very wealthy.</p>
+                    <p class='pb12'>But by the 1840s, Nantucket's whaling economy was in decline. A sandbar blocked large ships, which had become essential for the years-long voyages of this era, from entering the harbor. Moreover, Nantucket ship owners insisted on pursuing sperm oil almost exclusively &mdash; as opposed to whalebone and lower quality whale oil &mdash; which was a dangerous proposition as sperm whales became harder to find.</p>
+                    <p class='pb12'>Then, on the evening of July 13, a fire broke out in a hat shop. The flames engulfed the entire business district and raged all night. Miraculously, noone was killed, but 36 acres of property were destroyed, including much of the infrastructure of the whaling industry. Whaling would continue on Nantucket, but would never match its former glory.</p>
+                    <img class='py12' src='./images/nantucket-fire.jpg' alt='Nantucket Fire'>
+                    <p class='caption'>The Great Fire of Nantucket destroyed upwards of 500 buildings</p>
                 </div>
             </div>
         </div>
+
+        <!-- turning point 5 -->
+        <div class='turning-point-5'>
+            <div id='tp5-button' class='turning-point bg-darken75 opacity75-on-hover round px3 py3'>
+                <svg class='icon golden-age'><use xlink:href='#icon-info'/></svg>
+            </div>
+            <div class='tp-tooltip-5 flex-parent-inline flex-parent--center-cross flex-parent--column'>
+                <div class='flex-child px6 py6 bg-darken75 align-center round txt-s'>
+                    <p class='tp-name'>The Golden Age Peaks</p>
+                </div>
+                <span class='flex-child triangle triangle--d'></span>
+            </div>
+        </div>
+
+        <div id="tp5-modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content bg-black round px12 py12">
+                <span id='tp5-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
+                <div class='px12 py12'>
+                    <p class='modal-title'>1853: The Golden Age Peaks</p>
+                    <p class='py12'>The Golden Age fuckin' peaked.</p>
+                    <img class='py12' src='./images/golden-age.jpg' alt='Golden Age'>
+                    <p class='caption'>Whalemen attack a right whale</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- turning point 6 -->
+        <div class='turning-point-6'>
+            <div id='tp6-button' class='turning-point bg-darken75 opacity75-on-hover round px3 py3'>
+                <svg class='icon new-oil'><use xlink:href='#icon-info'/></svg>
+            </div>
+            <div class='tp-tooltip-6 flex-parent-inline flex-parent--center-cross flex-parent--column'>
+                <div class='flex-child px6 py6 bg-darken75 align-center round txt-s'>
+                    <p class='tp-name'>A New Oil Industry</p>
+                </div>
+                <span class='flex-child triangle triangle--d'></span>
+            </div>
+        </div>
+
+        <div id="tp6-modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content bg-black round px12 py12">
+                <span id='tp6-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
+                <div class='px12 py12'>
+                    <p class='modal-title'>1859: A New Oil Industry</p>
+                    <p class='py12'>In August of 1859, Edwin Drake drilled the nation's first well specifically targeting petroleum, striking a deposit 69 feet below Titusville, Pennsylvania. Oil production boomed following Drake's discovery.</p>
+
+                    <p class='pb12'>Kerosene, a lighting oil originally distilled from coal, had been invented a decade earlier as a cheaper, cleaner-burning substitute for whale oil. With petroleum now cheap and accessible, kerosene derived from petroleum became a cost-effective lighting solution.</p>
+
+                    <p class='pb12'>Meanwhile, years of over-hunting had depleted whale populations in the hunting grounds of the Atlantic, Pacific, and Indian oceans. As whales became harder to find, sperm and whale oil prices climbed. In 1860, a gallon of sperm oil cost $1.40, while a gallon of kerosene was only $0.75. The era of city streets being illuminated by whale oil was coming to a close.</p>
+
+                    <img class='py12' src='./images/well.jpg' alt='Oil Well'>
+                    <p class='caption'>An oil well in Titusville, Pennsylvania</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- turning point 7 -->
+        <div class='turning-point-7'>
+            <div id='tp7-button' class='turning-point bg-darken75 opacity75-on-hover round px3 py3'>
+                <svg class='icon civil-war'><use xlink:href='#icon-info'/></svg>
+            </div>
+            <div class='tp-tooltip-7 flex-parent-inline flex-parent--center-cross flex-parent--column'>
+                <div class='flex-child px6 py6 bg-darken75 align-center round txt-s'>
+                    <p class='tp-name'>The Civil War</p>
+                </div>
+                <span class='flex-child triangle triangle--d'></span>
+            </div>
+        </div>
+
+        <div id="tp7-modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content bg-black round px12 py12">
+                <span id='tp7-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
+                <div class='px12 py12'>
+                    <p class='modal-title'>1861 &mdash; 1865: The Civil War</p>
+                    <p class='py12'>The Civil War fuckin' sucked.</p>
+                    <img class='py12' src='./images/stone-fleet.jpg' alt='Stone Fleet'>
+                    <p class='caption'>The Stone Fleet sails for Charleston in 1861</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- turning point 8 -->
+        <div class='turning-point-8'>
+            <div id='tp8-button' class='turning-point bg-darken75 opacity75-on-hover round px3 py3'>
+                <svg class='icon disaster-decline'><use xlink:href='#icon-info'/></svg>
+            </div>
+            <div class='tp-tooltip-8 flex-parent-inline flex-parent--center-cross flex-parent--column'>
+                <div class='flex-child px6 py6 bg-darken75 align-center round txt-s'>
+                    <p class='tp-name'>Disaster &amp; Decline</p>
+                </div>
+                <span class='flex-child triangle triangle--d'></span>
+            </div>
+        </div>
+
+        <div id="tp8-modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content bg-black round px12 py12">
+                <span id='tp8-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
+                <div class='px12 py12'>
+                    <p class='modal-title'>1871: Disaster &amp; Decline</p>
+                    <p class='py12'>Disaster and decline</p>
+                    <img class='py12' src='./images/arctic.jpg' alt='Arctic Disaster'>
+                    <p class='caption'>Two of the 33 ships trapped in the Whaling Disaster of 1871</p>
+                </div>
+            </div>
+        </div>
+
 
 
         <!-- layer control -->
@@ -161,7 +301,16 @@
             <div class="modal-content bg-black round px12 py12">
                 <span id='about-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p>About the map</p>
+                    <p class='modal-title'>About</p>
+                    <p class='py12'>At its peak in the mid-19th century, whaling was a gigantic, global business that provided oil to light the streets and homes of Europe and America, and bone to make profitable consumer goods for sale around the world. The young United States dominated this industry, and for a time, whaling was the fifth largest sector of the American economy.</p>
+                    <p class='pb12'>While stories of whaling drama, adventure, and violence are typically set at sea, this map aims to communicate the economic impact of whaling back in American ports, where sperm oil, whale oil, and whalebone landed and entered the market. For over 60 port cities and towns, this map reports the market values of whale products as they were returned to port from 1804 to 1876, illustrating the drastic ebbs and flows of the industry.</p>
+                    <p class='pb12'>Quantitative data on sperm oil, whale oil, and whalebone arriving in port are drawn from the <a href='https://nmdl.org/projects/aowv/' target='_blank'>American Offshore Whaling Voyages Database</a>, created by the <a href='http://www.worldwhalinghistory.org/' target='_blank'>World Whaling History Project</a> and hosted online by the <a href='https://nmdl.org/' target='_blank'>National Maritime Digital Library</a>. Whale product values are derived from Alexander Starbuck’s <i><a href='https://archive.org/details/historyofamerica00star' target='_blank'>History of the American Whale Fishery</a></i>, published in 1878, which includes average annual prices of each product from 1804 to 1876 (hence the temporal scope of the map). All dollar values have been translated to 2018 dollars using Consumer Price Index estimates published by the <a href='https://www.minneapolisfed.org/community/financial-and-economic-education/cpi-calculator-information/consumer-price-index-1800' target='_blank'>Federal Reserve Bank of Minneapolis</a>.</p>
+                    <p class='py18 pb12 align-center author'>Map by Kerry Gathers</p>
+                    <p class='pb12 align-center contact'>
+                        <nobr><i class="fa fa-twitter mr-2"></i>&nbsp;<a class="contact" href="https://twitter.com/KerryGathers" target="_blank">@kerrygathers&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;</a></nobr>
+                        <nobr><i class="fa fa-github mr-2"></i>&nbsp;<a class="contact" href="https://github.com/kerrygathers" target="_blank">kerrygathers</a></nobr><br>
+                        <nobr><i class="fa fa-envelope mr-2"></i>&nbsp;<a class="contact" href="mailto:kerry.gathers@gmail.com" target="_blank">kerry.gathers@gmail.com</a></nobr>
+                    </p>
                 </div>
             </div>
         </div>
@@ -173,7 +322,15 @@
             <div class="modal-content bg-black round px12 py12">
                 <span id='sperm-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p>Sperm Oil</p>
+                    <p class='modal-title'>Sperm Oil</p>
+                    <div class='grid'>
+                        <div class='col--3'>
+                            <img class='py12' src='./images/sperm-oil.png' alt='Sperm Oil'>
+                        </div>
+                        <div class='col--9'>
+                            <p class='py12 pl12'>About sperm oil</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -185,7 +342,9 @@
             <div class="modal-content bg-black round px12 py12">
                 <span id='whale-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p>Whale Oil</p>
+                    <p class='modal-title'>Whale Oil</p>
+                    <p class='py12'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                    <img class='py12' src='./images/whale-oil.jpg' alt='Whale Oil'>
                 </div>
             </div>
         </div>
@@ -197,7 +356,16 @@
             <div class="modal-content bg-black round px12 py12">
                 <span id='bone-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p>Whale Bone</p>
+                    <p class='modal-title'>Whalebone</p>
+                    <div class='grid'>
+                        <div class='col--4'>
+                            <img class='pt12 pb6' src='./images/corset.jpg' alt='Whalebone Corset'>
+                            <p class='caption'>A "heavily boned" corset</p>
+                        </div>
+                        <div class='col--8'>
+                            <p class='py12 pl12'>About whalebone</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -210,7 +378,7 @@
                 <div class="legend-text legend-large-label absolute">$50m</div>
                 <div class="legend-text legend-small-label absolute">$25m</div>
             </div>
-            <p class='pt12 pb0 align-center legend-text'>In 2018 Dollars</p>
+            <p class='pt12 pb0 align-center legend-text'>in 2018 Dollars</p>
         </div>
 
         <!-- year legend -->
@@ -230,7 +398,7 @@
                 <div class='col--5'>
                     <p class='sperm'>Sperm Oil</p>
                     <p class='whale'>Whale Oil</p>
-                    <p class='bone'>Whale Bone</p>
+                    <p class='bone'>Whalebone</p>
                 </div>
                 <div class='col--7'>
                     <!-- D3 sparklines -->

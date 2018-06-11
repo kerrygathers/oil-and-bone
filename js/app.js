@@ -43,7 +43,7 @@
                 pointToLayer: function (feature, latlng) {
                     var portIcon = new L.icon({
                         iconUrl: "./images/harbor-11.svg",
-                        iconSize: [8.5, 8.5],
+                        iconSize: [10, 10],
                         popupAnchor: [-22, -22],
                         className: "icon"
                     });
@@ -83,7 +83,7 @@
         var dataLayers = {
             "<span class='layer-title'>Sperm Oil</span>": spermLayer,
             "<span class='layer-title'>Whale Oil</span>": whaleLayer,
-            "<span class='layer-title'>Whale Bone</span>": boneLayer
+            "<span class='layer-title'>Whalebone</span>": boneLayer
         };
 
         var layerControl = L.control.layers(null, dataLayers, {
@@ -234,10 +234,34 @@
                     $('.new-bedford').css('color', '#f7f4ea');
                 }
 
+                if (currentYear == 1846) {
+                    $('.great-fire').css('color', '#FBD62D');
+                } else {
+                    $('.great-fire').css('color', '#f7f4ea');
+                }
+
                 if (currentYear == 1853) {
                     $('.golden-age').css('color', '#FBD62D');
                 } else {
                     $('.golden-age').css('color', '#f7f4ea');
+                }
+
+                if (currentYear == 1859) {
+                    $('.new-oil').css('color', '#FBD62D');
+                } else {
+                    $('.new-oil').css('color', '#f7f4ea');
+                }
+
+                if (currentYear == 1865) {
+                    $('.civil-war').css('color', '#FBD62D');
+                } else {
+                    $('.civil-war').css('color', '#f7f4ea');
+                }
+
+                if (currentYear == 1871) {
+                    $('.disaster-decline').css('color', '#FBD62D');
+                } else {
+                    $('.disaster-decline').css('color', '#f7f4ea');
                 }
 
                 // resize the circles with updated year
@@ -319,18 +343,14 @@
         // adjust the position of the large based on size of circle
         $(".legend-large-label").css({
             'top': +3,
-            'right': largeDiameter - 18,
+            'right': largeDiameter,
         });
 
         // adjust the position of the large based on size of circle
         $(".legend-small-label").css({
             'top': smallDiameter + 6,
-            'right': largeDiameter - 18,
+            'right': largeDiameter,
         });
-
-        // insert a couple hr elements and use to connect value label to top of each circle
-        //$("<hr class='large'>").insertBefore(".legend-large-label")
-        //$("<hr class='small'>").insertBefore(".legend-small-label").css('top', largeDiameter - smallDiameter - 8);
 
     }
 
@@ -694,6 +714,10 @@
         $('#tp2-modal').hide();
         $('#tp3-modal').hide();
         $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
@@ -727,12 +751,14 @@
         $('#tp2-modal').hide();
         $('#tp3-modal').hide();
         $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
-
-
 
         $('#tp1-close').click(function () {
             $('#tp1-modal').hide();
@@ -758,11 +784,14 @@
         $('#tp1-modal').hide();
         $('#tp3-modal').hide();
         $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
-
 
         $('#tp2-close').click(function () {
             $('#tp2-modal').hide();
@@ -787,16 +816,18 @@
         $('#tp1-modal').hide();
         $('#tp2-modal').hide();
         $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
 
-
         $('#tp3-close').click(function () {
             $('#tp3-modal').hide();
         });
-
 
         window.onclick = function (event) {
             if (event.target == modal3) {
@@ -816,6 +847,10 @@
         $('#tp1-modal').hide();
         $('#tp2-modal').hide();
         $('#tp3-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
@@ -825,13 +860,137 @@
             $('#tp4-modal').hide();
         });
 
-
         window.onclick = function (event) {
             if (event.target == modal4) {
                 modal4.style.display = "none";
             }
         }
     }
+
+    // Modal 5
+    var modal5 = document.getElementById('tp5-modal');
+
+    var btn5 = document.getElementById("tp5-button");
+
+    btn5.onclick = function () {
+        modal5.style.display = "block";
+
+        $('#tp1-modal').hide();
+        $('#tp2-modal').hide();
+        $('#tp3-modal').hide();
+        $('#tp4-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
+        $('#sperm-modal').hide();
+        $('#whale-modal').hide();
+        $('#bone-modal').hide();
+        $('#about-modal').hide();
+
+        $('#tp5-close').click(function () {
+            $('#tp5-modal').hide();
+        });
+
+        window.onclick = function (event) {
+            if (event.target == modal5) {
+                modal5.style.display = "none";
+            }
+        }
+    }
+
+    // Modal 6
+    var modal6 = document.getElementById('tp6-modal');
+
+    var btn6 = document.getElementById("tp6-button");
+
+    btn6.onclick = function () {
+        modal6.style.display = "block";
+
+        $('#tp1-modal').hide();
+        $('#tp2-modal').hide();
+        $('#tp3-modal').hide();
+        $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
+        $('#sperm-modal').hide();
+        $('#whale-modal').hide();
+        $('#bone-modal').hide();
+        $('#about-modal').hide();
+
+        $('#tp6-close').click(function () {
+            $('#tp6-modal').hide();
+        });
+
+        window.onclick = function (event) {
+            if (event.target == modal6) {
+                modal6.style.display = "none";
+            }
+        }
+    }
+
+    // Modal 5
+    var modal7 = document.getElementById('tp7-modal');
+
+    var btn7 = document.getElementById("tp7-button");
+
+    btn7.onclick = function () {
+        modal7.style.display = "block";
+
+        $('#tp1-modal').hide();
+        $('#tp2-modal').hide();
+        $('#tp3-modal').hide();
+        $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp8-modal').hide();
+        $('#sperm-modal').hide();
+        $('#whale-modal').hide();
+        $('#bone-modal').hide();
+        $('#about-modal').hide();
+
+        $('#tp7-close').click(function () {
+            $('#tp7-modal').hide();
+        });
+
+        window.onclick = function (event) {
+            if (event.target == modal7) {
+                modal7.style.display = "none";
+            }
+        }
+    }
+
+    // Modal 5
+    var modal8 = document.getElementById('tp8-modal');
+
+    var btn8 = document.getElementById("tp8-button");
+
+    btn8.onclick = function () {
+        modal8.style.display = "block";
+
+        $('#tp1-modal').hide();
+        $('#tp2-modal').hide();
+        $('#tp3-modal').hide();
+        $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#sperm-modal').hide();
+        $('#whale-modal').hide();
+        $('#bone-modal').hide();
+        $('#about-modal').hide();
+
+        $('#tp8-close').click(function () {
+            $('#tp8-modal').hide();
+        });
+
+        window.onclick = function (event) {
+            if (event.target == modal8) {
+                modal8.style.display = "none";
+            }
+        }
+    }
+
 
     // LAYER INFO MODALS
 
@@ -853,7 +1012,6 @@
         $('#sperm-close').click(function () {
             $('#sperm-modal').hide();
         });
-
 
         window.onclick = function (event) {
             if (event.target == spermModal) {
@@ -881,7 +1039,6 @@
             $('#whale-modal').hide();
         });
 
-
         window.onclick = function (event) {
             if (event.target == whaleModal) {
                 whaleModal.style.display = "none";
@@ -907,7 +1064,6 @@
         $('#bone-close').click(function () {
             $('#bone-modal').hide();
         });
-
 
         window.onclick = function (event) {
             if (event.target == boneModal) {
