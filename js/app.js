@@ -721,6 +721,8 @@
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#bone-modal').hide();
+        $('#info').hide();
+
 
         $('#about-close').click(function () {
             $('#about-modal').hide();
@@ -759,6 +761,7 @@
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#tp1-close').click(function () {
             $('#tp1-modal').hide();
@@ -792,6 +795,7 @@
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#tp2-close').click(function () {
             $('#tp2-modal').hide();
@@ -824,6 +828,7 @@
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#tp3-close').click(function () {
             $('#tp3-modal').hide();
@@ -855,6 +860,7 @@
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#tp4-close').click(function () {
             $('#tp4-modal').hide();
@@ -886,6 +892,7 @@
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#tp5-close').click(function () {
             $('#tp5-modal').hide();
@@ -917,6 +924,7 @@
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#tp6-close').click(function () {
             $('#tp6-modal').hide();
@@ -948,6 +956,7 @@
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#tp7-close').click(function () {
             $('#tp7-modal').hide();
@@ -979,6 +988,7 @@
         $('#whale-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#tp8-close').click(function () {
             $('#tp8-modal').hide();
@@ -1005,9 +1015,14 @@
         $('#tp2-modal').hide();
         $('#tp3-modal').hide();
         $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
         $('#bone-modal').hide();
         $('#whale-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#sperm-close').click(function () {
             $('#sperm-modal').hide();
@@ -1031,9 +1046,14 @@
         $('#tp2-modal').hide();
         $('#tp3-modal').hide();
         $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
         $('#sperm-modal').hide();
         $('#bone-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#whale-close').click(function () {
             $('#whale-modal').hide();
@@ -1057,9 +1077,14 @@
         $('#tp2-modal').hide();
         $('#tp3-modal').hide();
         $('#tp4-modal').hide();
+        $('#tp5-modal').hide();
+        $('#tp6-modal').hide();
+        $('#tp7-modal').hide();
+        $('#tp8-modal').hide();
         $('#sperm-modal').hide();
         $('#whale-modal').hide();
         $('#about-modal').hide();
+        $('#info').hide();
 
         $('#bone-close').click(function () {
             $('#bone-modal').hide();

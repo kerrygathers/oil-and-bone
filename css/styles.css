@@ -98,6 +98,10 @@ a:hover {
     color: #f7f4ea;
 }
 
+.contact a:hover {
+    text-decoration: none;
+}
+
 /* About */
 
 #about-button {
@@ -615,7 +619,7 @@ a:hover {
     padding: 16px;
     width: 60%;
     max-width: 480px;
-    max-height: 400px;
+    max-height: 440px;
     overflow: auto;
 }
 
