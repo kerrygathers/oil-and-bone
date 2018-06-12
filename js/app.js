@@ -16,6 +16,8 @@
         accessToken: accessToken
     }).addTo(map);
 
+    // hide info panel on page load
+    var info = $('#info').hide();
 
     omnivore.csv('data/ports.csv')
         .on('ready', function (e) {
@@ -56,6 +58,16 @@
             whaleLayer = L.geoJson(data, options).addTo(map),
             boneLayer = L.geoJson(data, options).addTo(map);
 
+        var dataLayers = {
+            "<span class='layer-title'>Sperm Oil</span>": spermLayer,
+            "<span class='layer-title'>Whale Oil</span>": whaleLayer,
+            "<span class='layer-title'>Whalebone</span>": boneLayer
+        };
+
+        var layerControl = L.control.layers(null, dataLayers, {
+            collapsed: false
+        }).addTo(map);
+
         portLayer.eachLayer(function (layer) {
 
             var props = layer.feature.properties;
@@ -78,18 +90,6 @@
             color: '#F5F4E0',
         });
 
-        var info = $('#info').hide();
-
-        var dataLayers = {
-            "<span class='layer-title'>Sperm Oil</span>": spermLayer,
-            "<span class='layer-title'>Whale Oil</span>": whaleLayer,
-            "<span class='layer-title'>Whalebone</span>": boneLayer
-        };
-
-        var layerControl = L.control.layers(null, dataLayers, {
-            collapsed: false
-        }).addTo(map);
-
         resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, 1804);
 
         sequenceUI(spermLayer, whaleLayer, boneLayer);
@@ -111,7 +111,6 @@
 
         return radius;
         */
-
 
     }
 
