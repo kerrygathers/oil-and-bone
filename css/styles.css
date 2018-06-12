@@ -102,7 +102,101 @@ a:hover {
     text-decoration: none;
 }
 
-/* About */
+/* Legend and layer control styling */
+
+#legend {
+    color: #f7f4ea;
+    width: 133px;
+}
+
+.legend-text {
+    font-family: 'IM Fell English', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #f7f4ea;
+}
+
+.leaflet-control-layers-expanded {
+    color: #f7f4ea;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-style: none !important;
+    border-radius: 0px 0px 0px 4px;
+    width: 114px;
+    position: absolute;
+    right: 169px;
+    top: 35px;
+}
+
+#port-legend {
+    line-height: 2.1em;
+    padding: 3px 31px 0px 0px;
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: solid 1px rgb(247, 244, 234, 0.75);
+    position: absolute;
+    z-index: 700;
+    right: 152px;
+    top: 110px;
+}
+
+.port-legend-icon {
+    margin: 6px 6px 6px 8px;
+}
+
+.port-text {
+    font-size: 14.5px;
+}
+
+#layer-info {
+    border-radius: 0px 0px 4px 0px;
+    height: 102px;
+    z-index: 700;
+    position: absolute;
+    right: 152px;
+    top: 145px;
+}
+
+.layer-title {
+    font-family: 'IM Fell English', serif;
+    font-size: 14.5px;
+    line-height: 2.1em;
+}
+
+.sperm-circle {
+    display: inline-block;
+    margin: 11px 6px 0px 0px;
+    font-size: 21px;
+    color: #FBD62D;
+}
+
+.sperm-circle:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.whale-circle {
+    display: inline-block;
+    font-size: 21px;
+    color: #1a1aff;
+}
+
+.whale-circle:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.bone-circle {
+    display: inline-block;
+    padding-bottom: 0px;
+    font-size: 21px;
+    color: #FCFCF7;
+}
+
+.bone-circle:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+/* About Modal*/
 
 #about-button {
     background-color: rgb(0, 0, 0, 0.85);
@@ -126,7 +220,7 @@ a:hover {
 }
 
 
-/* layer info box on top of map */
+/* Port info modal with sparklines */
 
 #info {
     font-weight: 500;
@@ -217,102 +311,6 @@ a:hover {
     background-color: rgba(0, 0, 0, 1);
     border-radius: 4px;
     font-family: 'Lora', serif !important;
-}
-
-/* Legend and layer control styling */
-
-#legend {
-    font-family: 'Lora', serif;
-    font-weight: 500;
-    color: #f7f4ea;
-    width: 133px;
-}
-
-.legend-text {
-    font-family: 'IM Fell English', serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #f7f4ea;
-}
-
-.leaflet-control-layers-expanded {
-    color: #f7f4ea;
-    background-color: rgba(0, 0, 0, 0.75);
-    border-style: none !important;
-    border-radius: 0px 0px 0px 4px;
-    width: 114px;
-    position: absolute;
-    right: 169px;
-    top: 35px;
-}
-
-#port-legend {
-    line-height: 2.1em;
-    padding: 3px 31px 0px 0px;
-    border-radius: 4px 4px 0px 0px;
-    border-bottom: solid 1px rgb(247, 244, 234, 0.75);
-    position: absolute;
-    z-index: 700;
-    right: 152px;
-    top: 110px;
-}
-
-.port-legend-icon {
-    margin: 6px 6px 6px 8px;
-}
-
-.port-text {
-    font-size: 14.5px;
-}
-
-#layer-info {
-    border-radius: 0px 0px 4px 0px;
-    height: 102px;
-    z-index: 700;
-    position: absolute;
-    right: 152px;
-    top: 145px;
-}
-
-.layer-title {
-    font-family: 'IM Fell English', serif;
-    font-size: 14.5px;
-    line-height: 2.1em;
-}
-
-.sperm-circle {
-    display: inline-block;
-    margin: 11px 6px 0px 0px;
-    font-size: 21px;
-    color: #FBD62D;
-}
-
-.sperm-circle:hover {
-    opacity: .6;
-    cursor: pointer;
-}
-
-.whale-circle {
-    display: inline-block;
-    font-size: 21px;
-    color: #1a1aff;
-}
-
-.whale-circle:hover {
-    opacity: .6;
-    cursor: pointer;
-}
-
-.bone-circle {
-    display: inline-block;
-    padding-bottom: 0px;
-    font-size: 21px;
-    color: #FCFCF7;
-}
-
-.bone-circle:hover {
-    opacity: .6;
-    cursor: pointer;
 }
 
 /* Tooltips */
