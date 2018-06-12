@@ -90,6 +90,13 @@
             color: '#F5F4E0',
         });
 
+        // zoom to San Francisco on click in modal
+        var sfZoom = document.getElementById('san-fran');
+
+        sfZoom.onclick = function () {
+            map.setView([37.807510, -122.417880], 8);
+        }
+
         resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, 1804);
 
         sequenceUI(spermLayer, whaleLayer, boneLayer);

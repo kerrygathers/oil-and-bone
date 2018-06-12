@@ -507,6 +507,11 @@ a:hover {
     visibility: visible;
 }
 
+#san-fran {
+    cursor: pointer;
+    color: #FBD62D;
+}
+
 .turning-point-6 {
     color: #f7f4ea;
     font-size: 15px;
