@@ -102,6 +102,39 @@ a:hover {
     text-decoration: none;
 }
 
+/* Extent zoom buttons */
+
+#northeast {
+    color: #f7f4ea;
+    padding: 2px;
+    position: absolute;
+    top: 177px;
+    left: 10px;
+    z-index: 1000;
+}
+
+#san-fran {
+    color: #f7f4ea;
+    padding: 2px;
+    position: absolute;
+    top: 212px;
+    left: 10px;
+    z-index: 1000;
+}
+
+#usa {
+    color: #f7f4ea;
+    padding: 2px;
+    position: absolute;
+    top: 247px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.extent-button:hover {
+    cursor: pointer;
+}
+
 /* Legend and layer control styling */
 
 #legend {
@@ -507,7 +540,7 @@ a:hover {
     visibility: visible;
 }
 
-#san-fran {
+#san-fran-inline {
     cursor: pointer;
     color: #FBD62D;
 }

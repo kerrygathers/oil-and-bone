@@ -12,9 +12,43 @@
     L.tileLayer('https://api.mapbox.com/styles/v1/kgathers/cjhko8f7104bw2so2jcbsaafp/tiles/256/{z}/{x}/{y}?access_token=' + accessToken, {
         attribution: '<a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> <a href="https://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a>',
         maxZoom: 18,
+        minZoom: 4,
         id: 'mapbox.light',
         accessToken: accessToken
     }).addTo(map);
+
+
+
+    // additional zoom controls
+
+    // northeast zoom button
+    var northeastZoom = document.getElementById('northeast');
+
+    northeastZoom.onclick = function () {
+        map.setView([42.536146, -72.548563], 6.5);
+    }
+
+    // san francisco zoom button
+    var sfZoom = document.getElementById('san-fran');
+
+    sfZoom.onclick = function () {
+        map.setView([37.807510, -122.417880], 8);
+    }
+
+    // USA zoom button
+    var usaZoom = document.getElementById('usa');
+
+    usaZoom.onclick = function () {
+        map.setView([41.562244, -97.894478], 4.3);
+    }
+
+    // san francisco inline text zoom
+    var sfZoomInline = document.getElementById('san-fran-inline');
+
+    sfZoomInline.onclick = function () {
+        map.setView([37.807510, -122.417880], 8);
+    }
+
 
     // hide info panel on page load
     var info = $('#info').hide();
@@ -89,13 +123,6 @@
         boneLayer.setStyle({
             color: '#F5F4E0',
         });
-
-        // zoom to San Francisco on click in modal
-        var sfZoom = document.getElementById('san-fran');
-
-        sfZoom.onclick = function () {
-            map.setView([37.807510, -122.417880], 8);
-        }
 
         resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, 1804);
 
