@@ -40,13 +40,6 @@
         map.setView([41.562244, -97.894478], 4.3);
     }
 
-    // san francisco inline text zoom
-    var sfZoomInline = document.getElementById('san-fran-inline');
-
-    sfZoomInline.onclick = function () {
-        map.setView([37.807510, -122.417880], 8);
-    }
-
     // inline text zoom buttons
     $(document).ready(function () {
         $(".new-bedford-inline").on("click", function () {
@@ -68,7 +61,7 @@
             map.setView([42.2515, -73.7859], 11);
         });
     });
-  
+
     // adjust hard-coded values here
     var scaleRadius = d3.scaleSqrt()
         .domain([0, 84389592])
