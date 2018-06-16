@@ -17,8 +17,6 @@
         accessToken: accessToken
     }).addTo(map);
 
-
-
     // Zoom to extent buttons
 
     // northeast zoom button
@@ -42,6 +40,13 @@
         map.setView([41.562244, -97.894478], 4.3);
     }
 
+    // san francisco inline text zoom
+    var sfZoomInline = document.getElementById('san-fran-inline');
+
+    sfZoomInline.onclick = function () {
+        map.setView([37.807510, -122.417880], 8);
+    }
+
     // inline text zoom buttons
     $(document).ready(function () {
         $(".new-bedford-inline").on("click", function () {
@@ -63,6 +68,11 @@
             map.setView([42.2515, -73.7859], 11);
         });
     });
+  
+    // adjust hard-coded values here
+    var scaleRadius = d3.scaleSqrt()
+        .domain([0, 84389592])
+        .range([5, 76]);
 
     // hide info panel on page load
     var info = $('#info').hide();
@@ -93,7 +103,7 @@
                 pointToLayer: function (feature, latlng) {
                     var portIcon = new L.icon({
                         iconUrl: "./images/harbor-11.svg",
-                        iconSize: [10, 10],
+                        iconSize: [12, 12],
                         popupAnchor: [-22, -22],
                         className: "icon"
                     });
@@ -149,29 +159,14 @@
 
     } // end drawMap()
 
-    function calcRadius(val) {
-
-        var radius = Math.sqrt(val / Math.PI);
-        return radius * .015; // adjust .25 as a scale factor
-
-        /*
-        var radius = d3.scaleSqrt()
-            .domain([0, 84389592])
-            .range([8, 40]);
-
-        return radius;
-        */
-
-    }
-
-
     function resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear) {
 
         spermLayer.eachLayer(function (layer) {
 
             var props = layer.feature.properties;
 
-            var radius = calcRadius(Number(props['SV' + currentYear]));
+            var radius = scaleRadius(Number(props['SV' + currentYear]));
+
             layer.setRadius(radius);
 
             spermLayer.setStyle({
@@ -192,7 +187,7 @@
 
             var props = layer.feature.properties;
 
-            var radius = calcRadius(Number(layer.feature.properties['WV' + currentYear]));
+            var radius = scaleRadius(Number(layer.feature.properties['WV' + currentYear]));
             layer.setRadius(radius);
 
             whaleLayer.setStyle({
@@ -213,7 +208,8 @@
 
             var props = layer.feature.properties;
 
-            var radius = calcRadius(Number(layer.feature.properties['BV' + currentYear]));
+            var radius = scaleRadius(Number(layer.feature.properties['BV' + currentYear]));
+
             layer.setRadius(radius);
 
             boneLayer.setStyle({
@@ -370,7 +366,7 @@
         var maxValue = Math.round(sortedValues[0] / 1000) * 1000;
 
         // calc the diameters
-        var largeDiameter = calcRadius(maxValue) * 2,
+        var largeDiameter = scaleRadius(maxValue) * 2,
             smallDiameter = largeDiameter / 2;
 
         // select our circles container and set the height
