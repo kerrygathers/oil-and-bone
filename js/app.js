@@ -49,6 +49,21 @@
         map.setView([37.807510, -122.417880], 8);
     }
 
+    /*
+    // Nantucket inline text zoom
+    var nantucketZoomInline = document.getElementById('nantucket-inline');
+
+    nantucketZoomInline.onclick = function () {
+        map.setView([41.2847051, -70.1002773], 10);
+    }
+
+    // New bedford inline text zoom
+    var nbZoomInline = document.getElementById('new-bedford-inline');
+
+    nbZoomInline.onclick = function () {
+        map.setView([41.634989, -70.923805], 10);
+    }
+    */
 
     // hide info panel on page load
     var info = $('#info').hide();
@@ -418,6 +433,19 @@
     function retrieveInfo(portLayer) {
 
         portLayer.on('click', function (e) {
+
+            $('#tp1-modal').hide();
+            $('#tp2-modal').hide();
+            $('#tp3-modal').hide();
+            $('#tp4-modal').hide();
+            $('#tp5-modal').hide();
+            $('#tp6-modal').hide();
+            $('#tp7-modal').hide();
+            $('#tp8-modal').hide();
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
 
             var props = e.layer.feature.properties;
 
