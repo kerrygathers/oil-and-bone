@@ -52,7 +52,7 @@
     // adjust hard-coded values here
     var scaleRadius = d3.scaleSqrt()
         .domain([0, 84389592])
-        .range([8, 80]);
+        .range([5, 76]);
 
 
     // hide info panel on page load
@@ -84,7 +84,7 @@
                 pointToLayer: function (feature, latlng) {
                     var portIcon = new L.icon({
                         iconUrl: "./images/harbor-11.svg",
-                        iconSize: [10, 10],
+                        iconSize: [12, 12],
                         popupAnchor: [-22, -22],
                         className: "icon"
                     });
@@ -188,7 +188,7 @@
             var props = layer.feature.properties;
 
             var radius = scaleRadius(Number(layer.feature.properties['BV' + currentYear]));
-            
+
             layer.setRadius(radius);
 
             boneLayer.setStyle({
