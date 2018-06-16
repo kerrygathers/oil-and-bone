@@ -96,7 +96,7 @@
                 pointToLayer: function (feature, latlng) {
                     var portIcon = new L.icon({
                         iconUrl: "./images/harbor-11.svg",
-                        iconSize: [12, 12],
+                        iconSize: [13, 13],
                         popupAnchor: [-22, -22],
                         className: "icon"
                     });
