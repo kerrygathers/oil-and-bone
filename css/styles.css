@@ -137,17 +137,7 @@ a:hover {
 
 /* inline text zoom buttons */
 
-#san-fran-inline {
-    cursor: pointer;
-    color: #FBD62D;
-}
-
-#nantucket-inline {
-    cursor: pointer;
-    color: #FBD62D;
-}
-
-#new-bedford-inline {
+.inline-zoom {
     cursor: pointer;
     color: #FBD62D;
 }
