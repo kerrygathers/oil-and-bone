@@ -25,23 +25,22 @@
 
         <div id="map"></div>
 
-        <!-- ui slider -->
-        <div id='slider' class='range w300 bg-darken75 round px12'>
-            <input type='range' min="1804" , max="1876" , value="1804" , step="1" />
-        </div>
-
-
         <!-- extent zoom buttons -->
         <div id='northeast' class='bg-darken75 opacity75-on-hover round'>
-            <img class='extent-button' src='./images/northeast2.png' height='27px'>
+            <img class='extent-button' src='./images/northeast2.png' height='26px'>
         </div>
 
         <div id='san-fran' class='bg-darken75 opacity75-on-hover round'>
-            <img class='extent-button' src='./images/san-fran2.png' height='27px'>
+            <img class='extent-button' src='./images/san-fran2.png' height='26px'>
         </div>
 
         <div id='usa' class='bg-darken75 opacity75-on-hover round'>
-            <img class='extent-button' src='./images/usa2.png' height='27px'>
+            <img class='extent-button' src='./images/usa2.png' height='26px'>
+        </div>
+
+        <!-- ui slider -->
+        <div id='slider' class='range w300 bg-darken75 round px12'>
+            <input type='range' min="1804" , max="1876" , value="1804" , step="1" />
         </div>
 
         <!-- turning point 1 -->
@@ -60,13 +59,14 @@
         <div id="tp1-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='tp1-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p class='modal-title'>1812 &mdash; 1815: The War of 1812</p>
-                    <p class='py12'>The war for American independence obliterated Nantucket's whaling fleet &mdash; the dominant fleet of the time &mdash; but by the beginning of the 19th century, whaling profits were driving prosperity for Nantucketers once again. However, Great Britain's hostile trade policies and harassment and impressment of Americans at sea, including whalemen, made for a volatile maritime economy. These issues ultimately led to another war.</p>
+                    <p class='title-year'>1812 &mdash; 1815</p>
+                    <p class='modal-title'>The War of 1812</p>
+                    <p class='py12'>The war for American independence obliterated <span class='nantucket-inline inline-zoom'>Nantucket's <i class='fa fa-search-plus'></i></span>&nbsp;&nbsp;whaling fleet &mdash; the dominant fleet of the time &mdash; but by the beginning of the 19th century, whaling profits were driving prosperity for Nantucketers once again. However, Great Britain's hostile trade policies and harassment and impressment of Americans at sea, including whalemen, made for a volatile maritime economy. These issues ultimately led to another war.</p>
                     <p class='pb12'>When the War of 1812 broke out, dozens of American whaleships already at sea were destroyed by the British Navy. For the three years that the U.S. and Great Britain fought, American whaling operations nearly shut down completely. Only Nantucket, uniquely dependent on whaling because of its lack of arable land, continued consistently sending out whaleships.</p>
-                    <p class='pb12'>But whaling during the war was dangerous and unpredictable, and it was a lean time for Nantucket. Many whalers left Nantucket for safer ports, including a group who founded the town of Hudson, New York, over 100 miles inland along the Hudson River, which would find some success in whaling years later. Meanwhile, Nantucket's leaders tried to negotiate directly with the British, seeking the right to continue whaling in exchange for Nantucket's official neurality in the conflict. The British, for their part, wanted Nantucketers to relocate their operations to British territory in Nova Scotia. But the 1815 Treaty of Ghent ended the war before these negotiations reached any conclusion.</p>
+                    <p class='pb12'>But whaling during the war was dangerous and unpredictable, and it was a lean time for Nantucket. Many whalers left Nantucket for safer ports, including a group who founded the town of <span class='hudson-inline inline-zoom'>Hudson <i class='fa fa-search-plus'></i></span>, New York, over 100 miles inland along the Hudson River, which would find some success in whaling years later. Meanwhile, Nantucket's leaders tried to negotiate directly with the British, seeking the right to continue whaling in exchange for Nantucket's official neurality in the conflict. The British, for their part, wanted Nantucketers to relocate their operations to British territory in Nova Scotia. But the 1815 Treaty of Ghent ended the war before these negotiations reached any conclusion.</p>
                     <p class='pb12'>The end of the War fo 1812 marks the beginning of the Golden Age of Yankee Whaling, an era in which American whalers took advantage of the largely peaceful seas and came to dominate the global whaling industry.</p>
                     <img class='py12' src='./images/1812.jpg' alt='The War of 1812'>
                     <p class='caption'>American and British vessels square off in 1812</p>
@@ -90,15 +90,16 @@
         <div id="tp2-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='tp2-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p class='modal-title'>1820: The Wreck of the Essex</p>
-                    <p class='py12'>In the fall of 1820, Captain George Pollard, Jr., steered the <i>Essex</i>, which had launched from Nantucket the previous year, into newly discovered whaling grounds in the South Pacific, thousands of miles west of South America. One morning the crew spotted an 85-foot sperm whale acting strangely nearby. To their horror, the whale swam towards the ship and rammed it repeatedly. The whale then retreated a few hundred yards, faced the bow of the ship, and charged again to deliver the final, crushing blow. The bow was crushed, and as the whale shook free from the timbers and disappeared, the ship began to sink.</p>
+                    <p class='title-year'>1820</p>
+                    <p class='modal-title'>The Wreck of the Essex</p>
+                    <p class='py12'>In the fall of 1820, Captain George Pollard, Jr., steered the <i>Essex</i>, which had launched from <span class='nantucket-inline inline-zoom'>Nantucket <i class='fa fa-search-plus'></i></span>&nbsp;&nbsp;the previous year, into newly discovered whaling grounds in the South Pacific, thousands of miles west of South America. One morning the crew spotted an 85-foot sperm whale acting strangely nearby. To their horror, the whale swam towards the ship and rammed it repeatedly. The whale then retreated a few hundred yards, faced the bow of the ship, and charged again to deliver the final, crushing blow. The bow imploded, and as the whale shook free from the timbers and disappeared, the ship began to sink.</p>
                     <p class='pb12'>The crew of 20 took to three small whaleboats. The closest land was the Marquesas Islands, 1,200 miles to the west. But the crew had heard rumors of cannibals on the islands of the South Pacific, so they voted to go to South America, nearly twice as far away. Only six members of the party survived the ensuing ordeal, and some did so only by eating their deceased shipmates.</p>
                     <p>The tale of the <i>Essex</i>, both for its gruesomness and the perseverance of the survivors, is one of the most infamous stories in whaling history, and it inspired the climax of Herman Melville's <i>Moby-Dick</i>, which would become the most powerful depiction of whaling in American literature.</p>
                     <img class='py12' src='./images/essex.jpg' alt='The Wreck of the Essex'>
-                    <p class='caption'>An illustration of the destruction of the Essex, 1820</p>
+                    <p class='caption'>The destruction of the Essex, 1820</p>
                 </div>
             </div>
         </div>
@@ -119,11 +120,12 @@
         <div id="tp3-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='tp3-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p class='modal-title'>1827: The Rise of New Bedford</p>
-                    <p class='py12'>New Bedford, Massachusetts, was chartered in 1787, but commercial whaling in the area began when a third-generation Nantucket whaling merchant named William Rotch, Jr., moved to the area in 1780. New Bedford's advantages as a whaling hub can be explained in contrast to Nantucket, its early rival for whaling supremacy. Nantucket's harbor was partially blocked by a sandbar, restricintg entry for the largest ships of the day, while New Bedford's harbor was deep and unencumbered. Nantucket was unforested, forcing shipbuilders to import lumber from the mainland, while New Bedford was surrounded by deep woods. Finally, New Bedford's location on the mainland meant easier access to the markets of New England and the railroad network that began growing in the 19th century.</p>
+                    <p class='title-year'>1827</p>
+                    <p class='modal-title'>The Rise of New Bedford</p>
+                    <p class='py12'><span class='new-bedford-inline inline-zoom'>New Bedford <i class='fa fa-search-plus'></i></span>, Massachusetts, was chartered in 1787, but commercial whaling in the area began when a third-generation Nantucket whaling merchant named William Rotch, Jr., moved to the area in 1780. New Bedford's advantages as a whaling hub can be explained in contrast to <span class='nantucket-inline inline-zoom'>Nantucket <i class='fa fa-search-plus'></i></span>, its rival for whaling supremacy. Nantucket's harbor was partially blocked by a sandbar, restricintg entry for the largest ships of the day, while New Bedford's harbor was deep and unencumbered. Nantucket was unforested, forcing shipbuilders to import lumber from the mainland, while New Bedford was surrounded by deep woods. Finally, New Bedford's location on the mainland meant easier access to the markets of New England and the railroad network that began growing in the 19th century.</p>
                     <p class='pb12'>New Bedford's whaling fleet first surpassed Nantucket's in size in 1823, but as the map illustrates, 1827 was the first year in which more sperm oil landed here than in the old island port. The next twenty years brought exponential expansion, and when the U.S. whaling fleet peaked at 735 ships in 1846, nearly half of them sailed from New Bedford. The global reach of sperm and whale oil from New Bedford made it &ldquo;the city that lit the world,&rdquo; and also the richest city per capita on Earth.</p>
                     <img class='py12' src='./images/nb-mansion.jpg' alt='New Bedford Mansion'>
                     <p class='caption pb12'>Whaling success made New Bedford one of the nation's richest cities</p>
@@ -149,11 +151,12 @@
         <div id="tp4-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='tp4-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p class='modal-title'>1846: The Great Nantucket Fire</p>
-                    <p class='py12'>In the early 19th century, the success of Nantucket's whaling fleet was unrivaled. The island's population lived and breathed whaling, and men lucky or enterprising enough to become ship masters or owners could become very wealthy.</p>
+                    <p class='title-year'>1846</p>
+                    <p class='modal-title'>The Great Nantucket Fire</p>
+                    <p class='py12'>In the early 19th century, the success of <span class='nantucket-inline inline-zoom'>Nantucket's <i class='fa fa-search-plus'></i></span>&nbsp;&nbsp;whaling fleet was unrivaled. The island's population lived and breathed whaling, and men lucky or enterprising enough to become ship masters or owners could become very wealthy.</p>
                     <p class='pb12'>But by the 1840s, Nantucket's whaling economy was in decline. A sandbar blocked large ships, which had become essential for the years-long voyages of this era, from entering the harbor. Moreover, Nantucket ship owners insisted on pursuing sperm oil almost exclusively &mdash; as opposed to whalebone and lower quality whale oil &mdash; which was a dangerous proposition as sperm whales became harder to find.</p>
                     <p class='pb12'>Then, on the evening of July 13, a fire broke out in a hat shop. The flames engulfed the entire business district and raged all night. Miraculously, noone was killed, but 36 acres of property were destroyed, including much of the infrastructure of the whaling industry. Whaling would continue on Nantucket, but would never match its former glory.</p>
                     <img class='py12' src='./images/nantucket-fire.jpg' alt='Nantucket Fire'>
@@ -178,13 +181,14 @@
         <div id="tp5-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='tp5-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p class='modal-title'>1853: Peak of the Golden Age</p>
+                    <p class='title-year'>1853</p>
+                    <p class='modal-title'>Peak of the Golden Age</p>
                     <p class='py12'>The 1830s and '40s saw dizzying growth in the American whaling industry. As the map demonstrates, while whaling was only undertaken from a few ports in 1820, by the 1830s, whaleships were bringing oil and bone back to dozens of eastern towns.</p>
-                    <p class='pb12'>In 1848, a free African-American blacksmith named Lewis Temple invented the toggle iron harpoon in New Bedford. Based on Eskimo hunting tools, the tip of the harpoon lodged itself in or under a whale's blubber, suddenly making every whaleman with a harpoon much more lethal, and helping to push the whaling industry to new heights.</p>
-                    <p class='pb12'>Across the continent in California, previously only significant in whaling for luring Nantucketers off of boats and into gold mines, <span id='san-fran-inline'>San Francisco <i class='fa fa-search-plus'></i></span>&nbsp;&nbsp;launched the first whaling operations from the Pacific coast in the early 1850s.</p>
+                    <p class='pb12'>In 1848, a free African-American blacksmith named Lewis Temple invented the toggle iron harpoon in <span class='new-bedford-inline inline-zoom'>New Bedford <i class='fa fa-search-plus'></i></span>. Based on Eskimo hunting tools, the tip of the harpoon lodged itself in or under a whale's blubber, suddenly making every whaleman with a harpoon much more lethal, and helping to push the whaling industry to new heights.</p>
+                    <p class='pb12'>Across the continent in California, previously only significant in whaling for luring Nantucketers off of boats and into gold mines, <span class='san-fran-inline inline-zoom'>San Francisco <i class='fa fa-search-plus'></i></span>&nbsp;&nbsp;launched the first whaling operations from the Pacific coast in the early 1850s.</p>
                     <p class='pb12'>1853 would be the most profitable year of whaling's Golden Age. Whalemen killed 8,000 whales to bring home over 100,000 barrels of sperm oil, 260,000 barrels of whale oil, and 5.7 million pounds of whalebone, netting $11 million in sales, or $350 million in today's dollars.</p>
                     <img class='py12' src='./images/golden-age.jpg' alt='Golden Age'>
                     <p class='caption'>Whalemen attack a right whale</p>
@@ -208,10 +212,11 @@
         <div id="tp6-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='tp6-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p class='modal-title'>1859: A New Oil Industry</p>
+                    <p class='title-year'>1859</p>
+                    <p class='modal-title'>A New Oil Industry</p>
                     <p class='py12'>In August of 1859, Edwin Drake drilled the nation's first well specifically targeting petroleum, striking a deposit 69 feet below Titusville, Pennsylvania. Oil production boomed following Drake's discovery.</p>
 
                     <p class='pb12'>Kerosene, a lighting oil originally distilled from coal, had been invented a decade earlier as a cheaper, cleaner-burning substitute for whale oil. With petroleum now cheap and accessible, kerosene derived from petroleum became a cost-effective lighting solution.</p>
@@ -240,12 +245,13 @@
         <div id="tp7-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='tp7-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p class='modal-title'>1861 &mdash; 1865: War Deals Another Blow</p>
+                    <p class='title-year'>1861 &mdash; 1865</p>
+                    <p class='modal-title'>War Deals Another Blow</p>
                     <p class='py12'>Like the American Revolution and the War of 1812 before it, the Civil War was bad for the whaling business. The Confederate Navy, which was not strong enough to defend its ports, break Union blockades, or battle Union warships, chose to target Union commerce at sea. Confederate raiders sank and destroyed the cargo of nearly 50 Yankee whalers over the course of the war, though as the goal was to disrupt trade and not kill civilians, the ships’ crews were spared. The lost ships and merchandise were insured, but dangerous conditions at sea caused a dramatic increase in the price of insurance for ship owners, which was arguably the most damaging effect the war had on whaling.</p>
-                    <p class='pb12'>With whaling profits hard to come by, New Bedford found a different way to make money with its fleet. In 1861, the U.S. Navy bought 24 old, largely dilapidated New Bedford whaling vessels, sailed them south, and, with hulls full of heavy stone ballast, sank them in the harbors of Charleston and Savannah. Called the &ldquo;Stone Fleet,&rdquo; the sunken ships strengthened the Union blockade against Confederate military and merchant ships.</p>
+                    <p class='pb12'>With whaling profits hard to come by, <span class='new-bedford-inline inline-zoom'>New Bedford <i class='fa fa-search-plus'></i></span>&nbsp;&nbsp;found a different way to make money with its fleet. In 1861, the U.S. Navy bought 24 old, largely dilapidated New Bedford whaling vessels, sailed them south, and, with hulls full of heavy stone ballast, sank them in the harbors of Charleston and Savannah. Called the &ldquo;Stone Fleet,&rdquo; the sunken ships strengthened the Union blockade against Confederate military and merchant ships.</p>
                     <img class='py12' src='./images/stone-fleet.jpg' alt='Stone Fleet'>
                     <p class='caption'>The Stone Fleet sails for Charleston in 1861</p>
                 </div>
@@ -268,11 +274,12 @@
         <div id="tp8-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='tp8-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
-                    <p class='modal-title'>1871: Disaster &amp; Decline</p>
-                    <p class='py12'>In the summer of 1871, forty whaleships carrying 1,200 people were on the hunt for bowhead whales off the coast of Alaska. With whale stocks dwindling in the traditional grounds of the Atlantic, Pacific, and Indian Oceans, whalers were increasingly turning to the Arctic to maintain their livelihoods.</p>
+                    <p class='title-year'>1871</p>
+                    <p class='modal-title'>Disaster &amp; Decline</p>
+                    <p class='py12'>In the summer of 1871, forty whaleships &mdash; hailing mainly from <span class='new-bedford-inline inline-zoom'>New Bedford <i class='fa fa-search-plus'></i></span>, but also from <span class='new-london-inline inline-zoom'>New London <i class='fa fa-search-plus'></i></span>, <span class='edgartown-inline inline-zoom'>Edgartown <i class='fa fa-search-plus'></i></span>, and <span class='san-fran-inline inline-zoom'>San Francisco <i class='fa fa-search-plus'></i></span> &mdash; were on the hunt for bowhead whales off the coast of Alaska. With whale stocks dwindling in the traditional grounds of the Atlantic, Pacific, and Indian Oceans, whalers were increasingly turning to the Arctic to maintain their livelihoods.</p>
                     <p class='pb12'>A sudden shift in the wind blew pack ice in from east, trapping and even crusing many of the ships. Nearly 1,200 people were forced to evacuate in small whaleboats and head for ships sialing further south. Shockingly, noone was killed, but 33 ships and their cargo were lost.</p>
                     <p class='pb12'>The U.S. whaling industry was already in steep decline at this point. Whales had been severely overhunted, making them more difficult and expensive to find. Alcohol-based burning fluids and kerosene, which had been invented 12 years earlier, were cheaper and more widely used for lighting. Meanwhile, in Norway, steam-powered ships armed with grenade-tipped harpoons were reinventing whaling. Proud Yankees would not embrace the new technology and had no answer for the market forces driving their industry into the ground. The disaster in the Arctic was a final, demoralizing blow, from which the American whaling industry would never recover.</p>
                     <img class='py12' src='./images/arctic.jpg' alt='Arctic Disaster'>
@@ -315,7 +322,7 @@
         <div id="about-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='about-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
                     <p class='modal-title'>About</p>
@@ -337,23 +344,16 @@
         <div id="sperm-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='sperm-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
                     <p class='modal-title'>Sperm Oil</p>
-                    <div class='grid'>
-                        <div class='col--4'>
-                            <img class='py12' src='./images/sperm-oil.png' alt='Sperm Oil'>
-                        </div>
-                        <div class='col--8'>
-                            <p class='py12 pl12'>Sperm oil, a waxy liquid harvested from the spermaceti organ in a sperm whale's head &mdash; or, to a lesser extent, rendered from its blubber &mdash; was the most lucrative product in 19th century whaling, making sperm whales the nost prized whales in the ocean.
-                            </p>
-                            <p class='pb12 pl12'>Sperm oil had been used around the world for medicinal purposes and as a lighting oil for centuries. A spike in sperm oil demand came in the 18th century with the invention of spermaceti candles, which burned brighter, lasted longer, smelled sweeter, and produced less smoke than traditional tallow candles.</p>
-                        </div>
-                        <div class='col--12'>
-                            <p class='pb12'>Moreover, as the industrial revolution took hold and the cities of Europe and America grew, sperm oil illuminated many of the factories and city streets. Whaling techniques and technology improved to meet the growing demand, and sperm oil became the lynchpin in a multimillion-dollar industry.</p>
-                        </div>
-                    </div>
+                    <p class='py12'>Sperm oil, a waxy liquid harvested from the spermaceti organ in a sperm whale's head &mdash; or, to a lesser extent, rendered from its blubber &mdash; was the most lucrative product in 19th century whaling, making sperm whales the nost prized whales in the ocean.
+                    </p>
+                    <p class='pb12'>Sperm oil had been used around the world for medicinal purposes and as a lighting oil for centuries. A spike in sperm oil demand came in the 18th century with the invention of spermaceti candles, which burned brighter, lasted longer, smelled sweeter, and produced less smoke than traditional tallow candles.</p>
+                    <p class='pb12'>Moreover, as the industrial revolution took hold and the cities of Europe and America grew, sperm oil illuminated many of the factories and city streets. Whaling techniques and technology improved to meet the growing demand, and sperm oil became the lynchpin in a multimillion-dollar industry.</p>
+                    <img class='py12' src='./images/sperm-oil.jpg' alt='Sperm Oil'>
+                    <p class='caption'>An order for a case of sperm oil candles</p>
                 </div>
             </div>
         </div>
@@ -362,7 +362,7 @@
         <div id="whale-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='whale-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
                     <p class='modal-title'>Whale Oil</p>
@@ -377,20 +377,15 @@
         <div id="bone-modal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content bg-black round px12 py12">
+            <div class="modal-content bg-darken75 round px12 py12">
                 <span id='bone-close' class='close'><svg class='icon'><use xlink:href='#icon-close'/></svg></span>
                 <div class='px12 py12'>
                     <p class='modal-title'>Whalebone</p>
-                    <div class='grid'>
-                        <div class='col--4'>
-                            <img class='pt12 pb6' src='./images/corset.jpg' alt='Whalebone Corset'>
-                            <p class='caption'>A &ldquo;heavily boned&rdquo; corset</p>
-                        </div>
-                        <div class='col--8'>
-                            <p class='py12 pl12'>While the bones of whales were sometimes used to make art, tools, and cutlery, <i>whalebone</i> actually refers to baleen, the keratinous filtration system in the mouths of right whales, gray whales, bowheads, and other species.</p>
-                            <p class='pb12 pl12'>Whalebone was used in variety of consumer products that required its combination of flexibility and strength, including buggy whips, parasol ribs, and corsets.</p>
-                        </div>
-                    </div>
+                    <p class='py12'>While the bones of whales were sometimes used to make art, tools, and cutlery, <i>whalebone</i> actually refers to baleen, the keratinous filtration system in the mouths of right whales, gray whales, bowheads, and other species.</p>
+                    <p class='pb12'>Whalebone was used in variety of consumer products that required its combination of flexibility and strength, including buggy whips, parasol ribs, and corsets.</p>
+                    <img class='pt12 pb6' src='./images/corset2.jpg' alt='Whalebone Corset'>
+                    <p class='caption'>When only the strongest corset will do</p>
+
                 </div>
             </div>
         </div>

@@ -17,9 +17,7 @@
         accessToken: accessToken
     }).addTo(map);
 
-
-
-    // additional zoom controls
+    // Zoom to extent buttons
 
     // northeast zoom button
     var northeastZoom = document.getElementById('northeast');
@@ -49,11 +47,32 @@
         map.setView([37.807510, -122.417880], 8);
     }
 
+    // inline text zoom buttons
+    $(document).ready(function () {
+        $(".new-bedford-inline").on("click", function () {
+            map.setView([41.634989, -70.923805], 11);
+        });
+        $(".san-fran-inline").on("click", function () {
+            map.setView([37.807510, -122.417880], 8);
+        });
+        $(".nantucket-inline").on("click", function () {
+            map.setView([41.2847051, -70.1002773], 11);
+        });
+        $(".new-london-inline").on("click", function () {
+            map.setView([41.3502, -72.1023], 11);
+        });
+        $(".edgartown-inline").on("click", function () {
+            map.setView([41.3904, -70.519], 11);
+        });
+        $(".hudson-inline").on("click", function () {
+            map.setView([42.2515, -73.7859], 11);
+        });
+    });
+  
     // adjust hard-coded values here
     var scaleRadius = d3.scaleSqrt()
         .domain([0, 84389592])
         .range([5, 76]);
-
 
     // hide info panel on page load
     var info = $('#info').hide();
@@ -128,6 +147,8 @@
         boneLayer.setStyle({
             color: '#F5F4E0',
         });
+
+        timelineModals(spermLayer, whaleLayer, boneLayer, portLayer)
 
         resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, 1804);
 
@@ -409,6 +430,19 @@
     function retrieveInfo(portLayer) {
 
         portLayer.on('click', function (e) {
+
+            $('#tp1-modal').hide();
+            $('#tp2-modal').hide();
+            $('#tp3-modal').hide();
+            $('#tp4-modal').hide();
+            $('#tp5-modal').hide();
+            $('#tp6-modal').hide();
+            $('#tp7-modal').hide();
+            $('#tp8-modal').hide();
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
 
             var props = e.layer.feature.properties;
 
@@ -763,264 +797,394 @@
 
     // TIMELINE MODALS
 
-    // Modal 1
-    var modal1 = document.getElementById('tp1-modal');
 
-    // Get the button that opens the modal
-    var btn1 = document.getElementById("tp1-button");
+    function timelineModals(spermLayer, whaleLayer, boneLayer, portLayer) {
+        // Modal 1
+        var modal1 = document.getElementById('tp1-modal');
 
-    // When the user clicks the button, open the modal 
-    btn1.onclick = function () {
-        modal1.style.display = "block";
+        // Get the button that opens the modal
+        var btn1 = document.getElementById("tp1-button");
 
-        // if another modal is open, hide it
-        $('#tp2-modal').hide();
-        $('#tp3-modal').hide();
-        $('#tp4-modal').hide();
-        $('#tp5-modal').hide();
-        $('#tp6-modal').hide();
-        $('#tp7-modal').hide();
-        $('#tp8-modal').hide();
-        $('#sperm-modal').hide();
-        $('#whale-modal').hide();
-        $('#bone-modal').hide();
-        $('#about-modal').hide();
-        $('#info').hide();
+        // When the user clicks the button, open the modal 
+        btn1.onclick = function () {
+            modal1.style.display = "block";
 
-        $('#tp1-close').click(function () {
-            $('#tp1-modal').hide();
-        });
+            // update slider position
+            $('input').val('1812');
+            // update timeline icon colors
+            $('.war-1812').css('color', '#FBD62D');
+            $('.essex').css('color', '#f7f4ea');
+            $('.new-bedford').css('color', '#f7f4ea');
+            $('.great-fire').css('color', '#f7f4ea');
+            $('.golden-age').css('color', '#f7f4ea');
+            $('.new-oil').css('color', '#f7f4ea');
+            $('.civil-war').css('color', '#f7f4ea');
+            $('.disaster-decline').css('color', '#f7f4ea');
+            // current value of slider is current year
+            var currentYear = 1812;
+            // resize the circles with updated year
+            resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear);
 
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal1) {
-                modal1.style.display = "none";
-            }
-        }
-    }
-
-    // Modal 2
-    var modal2 = document.getElementById('tp2-modal');
-
-    var btn2 = document.getElementById("tp2-button");
-
-    btn2.onclick = function () {
-        modal2.style.display = "block";
-
-        $('#tp1-modal').hide();
-        $('#tp3-modal').hide();
-        $('#tp4-modal').hide();
-        $('#tp5-modal').hide();
-        $('#tp6-modal').hide();
-        $('#tp7-modal').hide();
-        $('#tp8-modal').hide();
-        $('#sperm-modal').hide();
-        $('#whale-modal').hide();
-        $('#bone-modal').hide();
-        $('#about-modal').hide();
-        $('#info').hide();
-
-        $('#tp2-close').click(function () {
+            // if another modal is open, hide it
             $('#tp2-modal').hide();
-        });
-
-
-        window.onclick = function (event) {
-            if (event.target == modal2) {
-                modal2.style.display = "none";
-            }
-        }
-    }
-
-    // Modal 3
-    var modal3 = document.getElementById('tp3-modal');
-
-    var btn3 = document.getElementById("tp3-button");
-
-    btn3.onclick = function () {
-        modal3.style.display = "block";
-
-        $('#tp1-modal').hide();
-        $('#tp2-modal').hide();
-        $('#tp4-modal').hide();
-        $('#tp5-modal').hide();
-        $('#tp6-modal').hide();
-        $('#tp7-modal').hide();
-        $('#tp8-modal').hide();
-        $('#sperm-modal').hide();
-        $('#whale-modal').hide();
-        $('#bone-modal').hide();
-        $('#about-modal').hide();
-        $('#info').hide();
-
-        $('#tp3-close').click(function () {
             $('#tp3-modal').hide();
-        });
-
-        window.onclick = function (event) {
-            if (event.target == modal3) {
-                modal3.style.display = "none";
-            }
-        }
-    }
-
-    // Modal 4
-    var modal4 = document.getElementById('tp4-modal');
-
-    var btn4 = document.getElementById("tp4-button");
-
-    btn4.onclick = function () {
-        modal4.style.display = "block";
-
-        $('#tp1-modal').hide();
-        $('#tp2-modal').hide();
-        $('#tp3-modal').hide();
-        $('#tp5-modal').hide();
-        $('#tp6-modal').hide();
-        $('#tp7-modal').hide();
-        $('#tp8-modal').hide();
-        $('#sperm-modal').hide();
-        $('#whale-modal').hide();
-        $('#bone-modal').hide();
-        $('#about-modal').hide();
-        $('#info').hide();
-
-        $('#tp4-close').click(function () {
             $('#tp4-modal').hide();
-        });
-
-        window.onclick = function (event) {
-            if (event.target == modal4) {
-                modal4.style.display = "none";
-            }
-        }
-    }
-
-    // Modal 5
-    var modal5 = document.getElementById('tp5-modal');
-
-    var btn5 = document.getElementById("tp5-button");
-
-    btn5.onclick = function () {
-        modal5.style.display = "block";
-
-        $('#tp1-modal').hide();
-        $('#tp2-modal').hide();
-        $('#tp3-modal').hide();
-        $('#tp4-modal').hide();
-        $('#tp6-modal').hide();
-        $('#tp7-modal').hide();
-        $('#tp8-modal').hide();
-        $('#sperm-modal').hide();
-        $('#whale-modal').hide();
-        $('#bone-modal').hide();
-        $('#about-modal').hide();
-        $('#info').hide();
-
-        $('#tp5-close').click(function () {
             $('#tp5-modal').hide();
-        });
-
-        window.onclick = function (event) {
-            if (event.target == modal5) {
-                modal5.style.display = "none";
-            }
-        }
-    }
-
-    // Modal 6
-    var modal6 = document.getElementById('tp6-modal');
-
-    var btn6 = document.getElementById("tp6-button");
-
-    btn6.onclick = function () {
-        modal6.style.display = "block";
-
-        $('#tp1-modal').hide();
-        $('#tp2-modal').hide();
-        $('#tp3-modal').hide();
-        $('#tp4-modal').hide();
-        $('#tp5-modal').hide();
-        $('#tp7-modal').hide();
-        $('#tp8-modal').hide();
-        $('#sperm-modal').hide();
-        $('#whale-modal').hide();
-        $('#bone-modal').hide();
-        $('#about-modal').hide();
-        $('#info').hide();
-
-        $('#tp6-close').click(function () {
             $('#tp6-modal').hide();
-        });
-
-        window.onclick = function (event) {
-            if (event.target == modal6) {
-                modal6.style.display = "none";
-            }
-        }
-    }
-
-    // Modal 5
-    var modal7 = document.getElementById('tp7-modal');
-
-    var btn7 = document.getElementById("tp7-button");
-
-    btn7.onclick = function () {
-        modal7.style.display = "block";
-
-        $('#tp1-modal').hide();
-        $('#tp2-modal').hide();
-        $('#tp3-modal').hide();
-        $('#tp4-modal').hide();
-        $('#tp5-modal').hide();
-        $('#tp6-modal').hide();
-        $('#tp8-modal').hide();
-        $('#sperm-modal').hide();
-        $('#whale-modal').hide();
-        $('#bone-modal').hide();
-        $('#about-modal').hide();
-        $('#info').hide();
-
-        $('#tp7-close').click(function () {
             $('#tp7-modal').hide();
-        });
+            $('#tp8-modal').hide();
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
+            $('#info').hide();
 
-        window.onclick = function (event) {
-            if (event.target == modal7) {
-                modal7.style.display = "none";
+            $('#tp1-close').click(function () {
+                $('#tp1-modal').hide();
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal1) {
+                    modal1.style.display = "none";
+                }
             }
         }
-    }
 
-    // Modal 5
-    var modal8 = document.getElementById('tp8-modal');
+        // Modal 2
+        var modal2 = document.getElementById('tp2-modal');
 
-    var btn8 = document.getElementById("tp8-button");
+        var btn2 = document.getElementById("tp2-button");
 
-    btn8.onclick = function () {
-        modal8.style.display = "block";
+        btn2.onclick = function () {
+            modal2.style.display = "block";
 
-        $('#tp1-modal').hide();
-        $('#tp2-modal').hide();
-        $('#tp3-modal').hide();
-        $('#tp4-modal').hide();
-        $('#tp5-modal').hide();
-        $('#tp6-modal').hide();
-        $('#tp7-modal').hide();
-        $('#sperm-modal').hide();
-        $('#whale-modal').hide();
-        $('#bone-modal').hide();
-        $('#about-modal').hide();
-        $('#info').hide();
+            // update slider position
+            $('input').val('1820');
+            // update timeline icon colors
+            $('.war-1812').css('color', '#f7f4ea');
+            $('.essex').css('color', '#FBD62D');
+            $('.new-bedford').css('color', '#f7f4ea');
+            $('.great-fire').css('color', '#f7f4ea');
+            $('.golden-age').css('color', '#f7f4ea');
+            $('.new-oil').css('color', '#f7f4ea');
+            $('.civil-war').css('color', '#f7f4ea');
+            $('.disaster-decline').css('color', '#f7f4ea');
+            // current value of slider is current year
+            var currentYear = 1820;
+            // resize the circles with updated year
+            resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear);
 
-        $('#tp8-close').click(function () {
+            $('#tp1-modal').hide();
+            $('#tp3-modal').hide();
+            $('#tp4-modal').hide();
+            $('#tp5-modal').hide();
+            $('#tp6-modal').hide();
+            $('#tp7-modal').hide();
             $('#tp8-modal').hide();
-        });
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
+            $('#info').hide();
 
-        window.onclick = function (event) {
-            if (event.target == modal8) {
-                modal8.style.display = "none";
+            $('#tp2-close').click(function () {
+                $('#tp2-modal').hide();
+            });
+
+
+            window.onclick = function (event) {
+                if (event.target == modal2) {
+                    modal2.style.display = "none";
+                }
+            }
+        }
+
+        // Modal 3
+        var modal3 = document.getElementById('tp3-modal');
+
+        var btn3 = document.getElementById("tp3-button");
+
+        btn3.onclick = function () {
+            modal3.style.display = "block";
+
+            // update slider position
+            $('input').val('1827');
+            // update timeline icon colors
+            $('.war-1812').css('color', '#f7f4ea');
+            $('.essex').css('color', '#f7f4ea');
+            $('.new-bedford').css('color', '#FBD62D');
+            $('.great-fire').css('color', '#f7f4ea');
+            $('.golden-age').css('color', '#f7f4ea');
+            $('.new-oil').css('color', '#f7f4ea');
+            $('.civil-war').css('color', '#f7f4ea');
+            $('.disaster-decline').css('color', '#f7f4ea');
+            // current value of slider is current year
+            var currentYear = 1827;
+            // resize the circles with updated year
+            resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear);
+
+            $('#tp1-modal').hide();
+            $('#tp2-modal').hide();
+            $('#tp4-modal').hide();
+            $('#tp5-modal').hide();
+            $('#tp6-modal').hide();
+            $('#tp7-modal').hide();
+            $('#tp8-modal').hide();
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
+            $('#info').hide();
+
+            $('#tp3-close').click(function () {
+                $('#tp3-modal').hide();
+            });
+
+            window.onclick = function (event) {
+                if (event.target == modal3) {
+                    modal3.style.display = "none";
+                }
+            }
+        }
+
+        // Modal 4
+        var modal4 = document.getElementById('tp4-modal');
+
+        var btn4 = document.getElementById("tp4-button");
+
+        btn4.onclick = function () {
+            modal4.style.display = "block";
+
+            // update slider position
+            $('input').val('1846');
+            // update timeline icon colors
+            $('.war-1812').css('color', '#f7f4ea');
+            $('.essex').css('color', '#f7f4ea');
+            $('.new-bedford').css('color', '#f7f4ea');
+            $('.great-fire').css('color', '#FBD62D');
+            $('.golden-age').css('color', '#f7f4ea');
+            $('.new-oil').css('color', '#f7f4ea');
+            $('.civil-war').css('color', '#f7f4ea');
+            $('.disaster-decline').css('color', '#f7f4ea');
+            // current value of slider is current year
+            var currentYear = 1846;
+            // resize the circles with updated year
+            resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear);
+
+            $('#tp1-modal').hide();
+            $('#tp2-modal').hide();
+            $('#tp3-modal').hide();
+            $('#tp5-modal').hide();
+            $('#tp6-modal').hide();
+            $('#tp7-modal').hide();
+            $('#tp8-modal').hide();
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
+            $('#info').hide();
+
+            $('#tp4-close').click(function () {
+                $('#tp4-modal').hide();
+            });
+
+            window.onclick = function (event) {
+                if (event.target == modal4) {
+                    modal4.style.display = "none";
+                }
+            }
+        }
+
+        // Modal 5
+        var modal5 = document.getElementById('tp5-modal');
+
+        var btn5 = document.getElementById("tp5-button");
+
+        btn5.onclick = function () {
+            modal5.style.display = "block";
+
+            // update slider position
+            $('input').val('1853');
+            // update timeline icon colors
+            $('.war-1812').css('color', '#f7f4ea');
+            $('.essex').css('color', '#f7f4ea');
+            $('.new-bedford').css('color', '#f7f4ea');
+            $('.great-fire').css('color', '#f7f4ea');
+            $('.golden-age').css('color', '#FBD62D');
+            $('.new-oil').css('color', '#f7f4ea');
+            $('.civil-war').css('color', '#f7f4ea');
+            $('.disaster-decline').css('color', '#f7f4ea');
+            // current value of slider is current year
+            var currentYear = 1853;
+            // resize the circles with updated year
+            resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear);
+
+            $('#tp1-modal').hide();
+            $('#tp2-modal').hide();
+            $('#tp3-modal').hide();
+            $('#tp4-modal').hide();
+            $('#tp6-modal').hide();
+            $('#tp7-modal').hide();
+            $('#tp8-modal').hide();
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
+            $('#info').hide();
+
+            $('#tp5-close').click(function () {
+                $('#tp5-modal').hide();
+            });
+
+            window.onclick = function (event) {
+                if (event.target == modal5) {
+                    modal5.style.display = "none";
+                }
+            }
+        }
+
+        // Modal 6
+        var modal6 = document.getElementById('tp6-modal');
+
+        var btn6 = document.getElementById("tp6-button");
+
+        btn6.onclick = function () {
+            modal6.style.display = "block";
+
+            // update slider position
+            $('input').val('1859');
+            // update timeline icon colors
+            $('.war-1812').css('color', '#f7f4ea');
+            $('.essex').css('color', '#f7f4ea');
+            $('.new-bedford').css('color', '#f7f4ea');
+            $('.great-fire').css('color', '#f7f4ea');
+            $('.golden-age').css('color', '#f7f4ea');
+            $('.new-oil').css('color', '#FBD62D');
+            $('.civil-war').css('color', '#f7f4ea');
+            $('.disaster-decline').css('color', '#f7f4ea');
+            // current value of slider is current year
+            var currentYear = 1859;
+            // resize the circles with updated year
+            resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear);
+
+            $('#tp1-modal').hide();
+            $('#tp2-modal').hide();
+            $('#tp3-modal').hide();
+            $('#tp4-modal').hide();
+            $('#tp5-modal').hide();
+            $('#tp7-modal').hide();
+            $('#tp8-modal').hide();
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
+            $('#info').hide();
+
+            $('#tp6-close').click(function () {
+                $('#tp6-modal').hide();
+            });
+
+            window.onclick = function (event) {
+                if (event.target == modal6) {
+                    modal6.style.display = "none";
+                }
+            }
+        }
+
+        // Modal 7
+        var modal7 = document.getElementById('tp7-modal');
+
+        var btn7 = document.getElementById("tp7-button");
+
+        btn7.onclick = function () {
+            modal7.style.display = "block";
+
+            // update slider position
+            $('input').val('1865');
+            // update timeline icon colors
+            $('.war-1812').css('color', '#f7f4ea');
+            $('.essex').css('color', '#f7f4ea');
+            $('.new-bedford').css('color', '#f7f4ea');
+            $('.great-fire').css('color', '#f7f4ea');
+            $('.golden-age').css('color', '#f7f4ea');
+            $('.new-oil').css('color', '#f7f4ea');
+            $('.civil-war').css('color', '#FBD62D');
+            $('.disaster-decline').css('color', '#f7f4ea');
+            // current value of slider
+            var currentYear = 1865;
+            // resize the circles with updated year
+            resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear);
+
+            $('#tp1-modal').hide();
+            $('#tp2-modal').hide();
+            $('#tp3-modal').hide();
+            $('#tp4-modal').hide();
+            $('#tp5-modal').hide();
+            $('#tp6-modal').hide();
+            $('#tp8-modal').hide();
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
+            $('#info').hide();
+
+            $('#tp7-close').click(function () {
+                $('#tp7-modal').hide();
+            });
+
+            window.onclick = function (event) {
+                if (event.target == modal7) {
+                    modal7.style.display = "none";
+                }
+            }
+        }
+
+        // Modal 8
+        var modal8 = document.getElementById('tp8-modal');
+
+        var btn8 = document.getElementById("tp8-button");
+
+        btn8.onclick = function () {
+            modal8.style.display = "block";
+
+            // update slider position
+            $('input').val('1871');
+            // update timeline icon colors
+            $('.war-1812').css('color', '#f7f4ea');
+            $('.essex').css('color', '#f7f4ea');
+            $('.new-bedford').css('color', '#f7f4ea');
+            $('.great-fire').css('color', '#f7f4ea');
+            $('.golden-age').css('color', '#f7f4ea');
+            $('.new-oil').css('color', '#f7f4ea');
+            $('.civil-war').css('color', '#f7f4ea');
+            $('.disaster-decline').css('color', '#FBD62D');
+            // current value of slider
+            var currentYear = 1871;
+            // resize the circles with updated year
+            resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear);
+
+            $('#tp1-modal').hide();
+            $('#tp2-modal').hide();
+            $('#tp3-modal').hide();
+            $('#tp4-modal').hide();
+            $('#tp5-modal').hide();
+            $('#tp6-modal').hide();
+            $('#tp7-modal').hide();
+            $('#sperm-modal').hide();
+            $('#whale-modal').hide();
+            $('#bone-modal').hide();
+            $('#about-modal').hide();
+            $('#info').hide();
+
+            $('#tp8-close').click(function () {
+                $('#tp8-modal').hide();
+            });
+
+            window.onclick = function (event) {
+                if (event.target == modal8) {
+                    modal8.style.display = "none";
+                }
             }
         }
     }
