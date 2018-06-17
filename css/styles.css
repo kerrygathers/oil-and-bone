@@ -381,7 +381,7 @@ a:hover {
 
 .leaflet-tooltip {
     z-index: 1000;
-    background-color: rgb(0, 0, 0, 0.85);
+    background-color: rgb(0, 0, 0, 0.85) !important;
     border-radius: 4px;
     padding: 12px;
     color: #f7f4ea;
