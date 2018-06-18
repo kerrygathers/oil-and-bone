@@ -167,11 +167,11 @@ a:hover {
 
 #layer-info {
     border-radius: 0px 0px 4px 0px;
-    height: 102px;
+    height: 103px;
     z-index: 700;
     position: absolute;
     right: 152px;
-    top: 145px;
+    top: 144px;
 }
 
 .layer-title {
@@ -182,7 +182,7 @@ a:hover {
 
 .sperm-circle {
     display: inline-block;
-    margin: 11px 6px 0px 0px;
+    margin: 10px 6px 1px 0px;
     font-size: 21px;
     color: #FBD62D;
 }
@@ -194,6 +194,7 @@ a:hover {
 
 .whale-circle {
     display: inline-block;
+    margin-bottom: 1px;
     font-size: 21px;
     color: #1a1aff;
 }
