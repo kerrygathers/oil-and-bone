@@ -148,7 +148,7 @@ a:hover {
 
 #port-legend {
     line-height: 2.1em;
-    padding: 3px 31px 0px 0px;
+    padding: 3px 28px 0px 0px;
     border-radius: 4px 4px 0px 0px;
     border-bottom: solid 1px rgb(247, 244, 234, 0.75);
     position: absolute;
@@ -162,27 +162,27 @@ a:hover {
 }
 
 .port-text {
-    font-size: 14.5px;
+    font-size: 15px;
 }
 
 #layer-info {
     border-radius: 0px 0px 4px 0px;
-    height: 103px;
+    height: 104px;
     z-index: 700;
     position: absolute;
     right: 152px;
-    top: 144px;
+    top: 146px;
 }
 
 .layer-title {
     font-family: 'IM Fell English', serif;
-    font-size: 14.5px;
+    font-size: 15px;
     line-height: 2.1em;
 }
 
 .sperm-circle {
     display: inline-block;
-    margin: 10px 6px 1px 0px;
+    margin: 9px 6px 2px 0px;
     font-size: 21px;
     color: #FBD62D;
 }
@@ -194,7 +194,7 @@ a:hover {
 
 .whale-circle {
     display: inline-block;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
     font-size: 21px;
     color: #1a1aff;
 }
