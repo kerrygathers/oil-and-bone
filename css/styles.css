@@ -143,7 +143,7 @@ a:hover {
     width: 114px;
     position: absolute;
     right: 169px;
-    top: 35px;
+    top: 36px;
 }
 
 #port-legend {
@@ -182,7 +182,7 @@ a:hover {
 
 .sperm-circle {
     display: inline-block;
-    margin: 9px 6px 2px 0px;
+    margin: 10px 6px 2px 0px;
     font-size: 21px;
     color: #FBD62D;
 }
