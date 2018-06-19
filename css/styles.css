@@ -147,7 +147,7 @@ a:hover {
 }
 
 #port-legend {
-    line-height: 2.1em;
+    line-height: 31px;
     padding: 3px 28px 0px 0px;
     border: solid 1px rgb(247, 244, 234, 0.75);
     border: solid 1px rgba(247, 244, 234, 0.75);
@@ -178,7 +178,7 @@ a:hover {
 .layer-title {
     font-family: 'IM Fell English', serif;
     font-size: 15px;
-    line-height: 2.1em;
+    line-height: 31px;
 }
 
 .sperm-circle {
