@@ -258,7 +258,7 @@ a:hover {
 
 #info {
     font-weight: 500;
-    z-index: 400;
+    z-index: 900;
     position: fixed;
     width: 367px;
     bottom: 118px;
