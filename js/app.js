@@ -1,17 +1,12 @@
 (function () {
 
-    /*
-    // prevent scrolling on touch
-    document.ontouchmove = function (e) {
-        e.preventDefault();
-    }
-    */
+    // hide info panel on page load
+    var info = $('#info').hide();
 
     var map = L.map('map', {
         zoomSnap: .1,
         center: [42.536146, -72.548563],
         zoom: 6.5
-        //minZoom: 4
     });
 
     var accessToken = 'pk.eyJ1Ijoia2dhdGhlcnMiLCJhIjoiY2pnd3VkODdzMWJtdjJxbXhqYWQ0MnNldSJ9.5nJcFQH7U3GAQh_vvq3Tcw'
@@ -69,13 +64,10 @@
         });
     });
 
-    // adjust hard-coded values here
+    // global variable for radius calculation
     var scaleRadius = d3.scaleSqrt()
         .domain([0, 84389592])
         .range([5, 76]);
-
-    // hide info panel on page load
-    var info = $('#info').hide();
 
     omnivore.csv('data/ports.csv')
         .on('ready', function (e) {
@@ -157,7 +149,7 @@
         // add info panel on port layer click
         retrieveInfo(portLayer);
 
-    } // end drawMap()
+    }
 
     function resizeCircles(spermLayer, whaleLayer, boneLayer, portLayer, currentYear) {
 
@@ -340,7 +332,7 @@
 
         legendControl.addTo(map);
 
-        // loop through all university features
+        // loop through all port features
         var dataValues = data.features.map(function (port) {
             // for each year
             for (var year in port.properties) {
@@ -354,8 +346,6 @@
 
             }
         });
-
-        //console.log(dataValues);
 
         // sort the array
         var sortedValues = dataValues.sort(function (a, b) {
@@ -748,11 +738,9 @@
 
         /* INFO CLOSE BUTTON */
 
-
         $('#info-close').click(function () {
             $('#info').hide();
         });
-
 
     }
 
