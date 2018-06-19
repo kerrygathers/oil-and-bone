@@ -1,9 +1,11 @@
 (function () {
 
+    /*
     // prevent scrolling on touch
     document.ontouchmove = function (e) {
         e.preventDefault();
     }
+    */
 
     var map = L.map('map', {
         zoomSnap: .1,
