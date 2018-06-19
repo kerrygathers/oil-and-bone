@@ -36,17 +36,17 @@ h4 {
     color: #f7f4ea;
 }
 
+p {
+    font-family: 'IM Fell English', serif;
+    font-size: 16px;
+    color: #f7f4ea;
+}
+
 #map {
     position: fixed;
     top: 100px;
     bottom: 0px;
     width: 100%;
-}
-
-p {
-    font-family: 'IM Fell English', serif;
-    font-size: 16px;
-    color: #f7f4ea;
 }
 
 .mapbox-logo,
@@ -336,7 +336,6 @@ a:hover {
     margin-right: 20px;
 }
 
-
 /* sparkline styling */
 
 .jqstooltip {
@@ -419,7 +418,7 @@ a:hover {
     position: fixed;
     bottom: 53px;
     left: 117px;
-    z-index: 1000;
+    z-index: 700;
 }
 
 .tp-tooltip-1 {
@@ -444,7 +443,7 @@ a:hover {
     position: fixed;
     bottom: 53px;
     left: 146px;
-    z-index: 1000;
+    z-index: 700;
 }
 
 .tp-tooltip-2 {
@@ -469,7 +468,7 @@ a:hover {
     position: fixed;
     bottom: 53px;
     left: 171px;
-    z-index: 1000;
+    z-index: 700;
 }
 
 .tp-tooltip-3 {
@@ -494,7 +493,7 @@ a:hover {
     position: fixed;
     bottom: 53px;
     left: 238px;
-    z-index: 1000;
+    z-index: 700;
 }
 
 .tp-tooltip-4 {
@@ -519,7 +518,7 @@ a:hover {
     position: fixed;
     bottom: 53px;
     left: 263px;
-    z-index: 1000;
+    z-index: 700;
 }
 
 .tp-tooltip-5 {
@@ -544,7 +543,7 @@ a:hover {
     position: fixed;
     bottom: 53px;
     left: 285px;
-    z-index: 1000;
+    z-index: 700;
 }
 
 .tp-tooltip-6 {
@@ -569,7 +568,7 @@ a:hover {
     position: fixed;
     bottom: 53px;
     left: 307px;
-    z-index: 1000;
+    z-index: 700;
 }
 
 .tp-tooltip-7 {
@@ -594,7 +593,7 @@ a:hover {
     position: fixed;
     bottom: 53px;
     left: 328px;
-    z-index: 1000;
+    z-index: 700;
 }
 
 .tp-tooltip-8 {
@@ -794,5 +793,59 @@ a:hover {
 
     .about-modal-content {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+
+    header {
+        height: 140px;
+    }
+
+    h1 {
+        line-height: 50px;
+        margin-left: 7px;
+        margin-right: 7px;
+        padding-top: 32px;
+        padding-bottom: 5px;
+    }
+
+    h4 {
+        margin-left: 9px;
+        margin-right: 7px;
+    }
+
+    #map {
+        top: 140px;
+    }
+
+    #legend {
+        display: none;
+    }
+
+    .leaflet-control-layers-expanded {
+        color: #f7f4ea;
+        background-color: rgba(0, 0, 0, 0.75);
+        border-style: none !important;
+        border-radius: 0px 0px 0px 4px;
+        width: 115px;
+        position: absolute;
+        right: 22px;
+        top: 35px;
+    }
+
+    #layer-info {
+        right: 6px;
+        top: 185px;
+    }
+
+    #port-legend {
+        right: 6px;
+        top: 150px;
+    }
+
+    .modal {
+        width: 94%;
+        z-index: 1000;
     }
 }
