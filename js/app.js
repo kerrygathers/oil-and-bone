@@ -761,7 +761,7 @@
     var modalAbout = document.getElementById('about-modal');
 
     // Get the button that opens the modal
-    var btnAbout = document.getElementById("about-button");
+    var btnAbout = document.getElementById('about-button');
 
     // When the user clicks the button, open the modal 
     btnAbout.onclick = function () {
