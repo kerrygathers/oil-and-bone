@@ -169,7 +169,6 @@ a:hover {
 
 #layer-info {
     border-radius: 0px 0px 4px 0px;
-    height: 105px;
     z-index: 700;
     position: fixed;
     right: 152px;
@@ -208,7 +207,7 @@ a:hover {
 
 .bone-circle {
     display: inline-block;
-    padding-bottom: 0px;
+    margin-bottom: 4px;
     font-size: 21px;
     color: #FCFCF7;
 }
