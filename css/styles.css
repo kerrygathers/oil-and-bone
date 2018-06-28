@@ -149,8 +149,8 @@ a:hover {
 #port-legend {
     line-height: 31px;
     padding: 3px 28px 0px 0px;
-    border: solid 1px rgb(247, 244, 234, 0.9);
-    border: solid 1px rgba(247, 244, 234, 0.9);
+    border: solid 1px rgb(247, 244, 234, 0.8);
+    border: solid 1px rgba(247, 244, 234, 0.8);
     border-style: none none solid none;
     border-radius: 4px 4px 0px 0px;
     position: fixed;
