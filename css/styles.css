@@ -383,7 +383,6 @@ a:hover {
 
 .leaflet-tooltip {
     z-index: 1000;
-    background-color: rgb(0, 0, 0, 0.85) !important;
     background-color: rgba(0, 0, 0, 0.85) !important;
     border-radius: 4px;
     padding: 12px;
@@ -417,6 +416,9 @@ a:hover {
     font-style: italic;
 }
 
+.leaflet-tooltip-left:before {
+    border-left-color: rgba(0, 0, 0, 0.85) !important;
+}
 .triangle {
     color: rgba(0, 0, 0, 0.75);
 }
