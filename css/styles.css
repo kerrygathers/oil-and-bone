@@ -416,12 +416,22 @@ a:hover {
     font-style: italic;
 }
 
+
+/* tooltip tip styles! */
+
 .leaflet-tooltip-left:before {
-    border-left-color: rgba(0, 0, 0, 0.85) !important;
+    border-left-color: rgba(0, 0, 0, 0.75) !important;
 }
+
+.leaflet-tooltip-right:before {
+    border-right-color: rgba(0, 0, 0, 0.75) !important;
+}
+
 .triangle {
     color: rgba(0, 0, 0, 0.75);
 }
+
+/* Timeline tooltips */
 
 .turning-point-1 {
     color: #f7f4ea;
