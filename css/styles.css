@@ -137,7 +137,7 @@ a:hover {
 
 .leaflet-control-layers-expanded {
     color: #f7f4ea;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0);
     border-style: none !important;
     border-radius: 0px 0px 0px 4px;
     width: 114px;
@@ -168,11 +168,20 @@ a:hover {
 }
 
 #layer-info {
-    border-radius: 0px 0px 4px 0px;
     z-index: 700;
     position: fixed;
     right: 152px;
     top: 145px;
+}
+
+#layer-background {
+    position: absolute;
+    z-index: 900;
+    border-radius: 0px 0px 4px 4px;
+    right: 152px;
+    top: 46px;
+    width: 141px;
+    height: 105px;
 }
 
 .layer-title {
