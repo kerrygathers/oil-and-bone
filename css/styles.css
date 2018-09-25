@@ -51,8 +51,21 @@ p {
 
 .mapbox-logo,
 .leaflet-control-attribution {
-    display: none;
+    font-family: 'IM Fell English', serif;
+    font-size: 11px !important;
+    background-color: none !important;
+}
 
+.mapbox-logo,
+.leaflet-control-attribution a {
+    color: #0c0c0c;
+    background-color: none !important;
+}
+
+.leaflet-container .leaflet-control-attribution {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0;
 }
 
 .legend-large,
