@@ -65,7 +65,7 @@ p {
 .leaflet-container .leaflet-control-attribution {
     background: #fff;
     background: rgba(255, 255, 255, 0.3);
-    margin: 0;
+    padding: 1px 4px;
 }
 
 .legend-large,
